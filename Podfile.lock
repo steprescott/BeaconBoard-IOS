@@ -1,0 +1,22 @@
+PODS:
+  - SQKDataKit (0.5.2):
+    - SQKDataKit/ContextManager
+    - SQKDataKit/CoreDataOperation
+    - SQKDataKit/FetchedTableViewController
+    - SQKDataKit/ManagedObjectController
+    - SQKDataKit/ManagedObjectExtensions
+  - SQKDataKit/ContextManager (0.5.2)
+  - SQKDataKit/CoreDataOperation (0.5.2):
+    - SQKDataKit/ContextManager
+    - SQKDataKit/ManagedObjectExtensions
+  - SQKDataKit/FetchedTableViewController (0.5.2)
+  - SQKDataKit/ManagedObjectController (0.5.2)
+  - SQKDataKit/ManagedObjectExtensions (0.5.2)
+
+DEPENDENCIES:
+  - SQKDataKit
+
+SPEC CHECKSUMS:
+  SQKDataKit: c69ed926c933b98375da0347ef6a0b09b14fb297
+
+COCOAPODS: 0.34.4
