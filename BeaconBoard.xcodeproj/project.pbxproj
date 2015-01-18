@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A2044271A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2044261A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m */; };
 		4A5FE59C1A697361002F5446 /* Course+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE59B1A697361002F5446 /* Course+Addtions.m */; };
 		4A5FE59F1A69736D002F5446 /* Lesson+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE59E1A69736D002F5446 /* Lesson+Addtions.m */; };
 		4A5FE5A21A697378002F5446 /* Resource+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5A11A697378002F5446 /* Resource+Addtions.m */; };
@@ -46,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		02E4E4459F4AE97843E2B503 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2044251A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconDiscoveryMasterTableViewController.h; sourceTree = "<group>"; };
+		4A2044261A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconDiscoveryMasterTableViewController.m; sourceTree = "<group>"; };
 		4A5FE59A1A697361002F5446 /* Course+Addtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Course+Addtions.h"; sourceTree = "<group>"; };
 		4A5FE59B1A697361002F5446 /* Course+Addtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Course+Addtions.m"; sourceTree = "<group>"; };
 		4A5FE59D1A69736D002F5446 /* Lesson+Addtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lesson+Addtions.h"; sourceTree = "<group>"; };
@@ -123,6 +126,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A2044241A6C3A78003FE1D2 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4A2044251A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.h */,
+				4A2044261A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
 		4AEB9B0F1A6818CE00482EDF = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +162,7 @@
 				4AEB9B201A6818CF00482EDF /* AppDelegate.m */,
 				4AEB9B441A681AEF00482EDF /* Controllers */,
 				4AEB9B451A681AEF00482EDF /* Model */,
-				4AEB9B481A681AEF00482EDF /* View controllers */,
+				4A2044241A6C3A78003FE1D2 /* View controllers */,
 				4AEB9B281A6818CF00482EDF /* Main.storyboard */,
 				4AEB9B2B1A6818CF00482EDF /* Images.xcassets */,
 				4AEB9B2D1A6818CF00482EDF /* LaunchScreen.xib */,
@@ -225,13 +237,6 @@
 				4A5FE5A71A697399002F5446 /* Session+Addtions.m */,
 			);
 			path = "Core data categories";
-			sourceTree = "<group>";
-		};
-		4AEB9B481A681AEF00482EDF /* View controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View controllers";
 			sourceTree = "<group>";
 		};
 		4AEB9B491A681B2700482EDF /* Web client */ = {
@@ -420,6 +425,7 @@
 				4A5FE5B11A697B3C002F5446 /* Room.m in Sources */,
 				4AEB9B211A6818CF00482EDF /* AppDelegate.m in Sources */,
 				4A5FE5BD1A697B3D002F5446 /* Lesson.m in Sources */,
+				4A2044271A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m in Sources */,
 				4A5FE5B71A697B3D002F5446 /* ResourceType.m in Sources */,
 				4AEB9B661A682B2F00482EDF /* Room+Addtions.m in Sources */,
 				4AEB9B501A68232800482EDF /* DataSynchroniser.m in Sources */,

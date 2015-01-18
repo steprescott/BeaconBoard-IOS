@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BeaconDiscoveryMasterTableViewController.h"
 #import "DataSynchroniser.h"
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
@@ -21,9 +22,8 @@
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
-    splitViewController.delegate = self;
     
-    [DataSynchroniser syncData];
+//    [DataSynchroniser syncData];
     
     return YES;
 }
