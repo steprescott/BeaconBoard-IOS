@@ -1,4 +1,5 @@
 PODS:
+  - SQKBeaconHelper (2.0.0)
   - SQKDataKit (0.5.2):
     - SQKDataKit/ContextManager
     - SQKDataKit/CoreDataOperation
@@ -14,9 +15,11 @@ PODS:
   - SQKDataKit/ManagedObjectExtensions (0.5.2)
 
 DEPENDENCIES:
+  - SQKBeaconHelper
   - SQKDataKit
 
 SPEC CHECKSUMS:
+  SQKBeaconHelper: ab9048400966948d1ebbaa6c361333caa4d69334
   SQKDataKit: c69ed926c933b98375da0347ef6a0b09b14fb297
 
 COCOAPODS: 0.34.4
