@@ -17,7 +17,7 @@ static SQKContextManager *sharedManger;
     if (!sharedManger)
     {
         NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:nil];
-        sharedManger = [[SQKContextManager alloc] initWithStoreType:NSSQLiteStoreType managedObjectModel:model storeURL:nil];
+        sharedManger = [[SQKContextManager alloc] initWithStoreType:NSSQLiteStoreType managedObjectModel:model orderedManagedObjectModelNames:nil storeURL:nil];
     }
     
     return sharedManger;

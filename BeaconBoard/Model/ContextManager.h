@@ -9,13 +9,17 @@
 #import "SQKContextManager.h"
 #import <SQKDataKit/SQKDataKit.h>
 
-#import "Beacon+Addtions.h"
-#import "Course+Addtions.h"
-#import "Lesson+Addtions.h"
-#import "Resource+Addtions.h"
-#import "ResourceType+Addtions.h"
-#import "Room+Addtions.h"
-#import "Session+Addtions.h"
+#import "Attendance+Additions.h"
+#import "Beacon+Additions.h"
+#import "Course+Additions.h"
+#import "Lecturer+Additions.h"
+#import "Lesson+Additions.h"
+#import "Resource+Additions.h"
+#import "ResourceType+Additions.h"
+#import "Room+Additions.h"
+#import "Role+Additions.h"
+#import "Session+Additions.h"
+#import "Student+Additions.h"
 
 @interface ContextManager : SQKContextManager
 

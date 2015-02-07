@@ -2,7 +2,7 @@
 //  Room.m
 //  BeaconBoard
 //
-//  Created by Ste Prescott on 16/01/2015.
+//  Created by Ste Prescott on 07/02/2015.
 //  Copyright (c) 2015 Ste Prescott. All rights reserved.
 //
 
@@ -15,6 +15,7 @@
 
 @dynamic number;
 @dynamic roomID;
+@dynamic hasBeenUpdated;
 @dynamic beacons;
 @dynamic sessions;
 

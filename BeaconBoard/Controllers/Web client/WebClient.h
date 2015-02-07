@@ -16,14 +16,23 @@ typedef NS_ENUM(NSUInteger, RequestType) {
 
 @interface WebClient : NSObject
 
+@property (nonatomic, strong) NSString *userToken;
+
 + (WebClient *)sharedClient;
 
+- (void)asyncLoginUsername:(NSString *)username password:(NSString *)password success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+
+- (NSArray *)GETAllAttendancesError:(NSError **)error;
 - (NSArray *)GETAllBeaconsError:(NSError **)error;
 - (NSArray *)GETAllCourcesError:(NSError **)error;
+- (NSArray *)GETAllLecturersError:(NSError **)error;
 - (NSArray *)GETAllLessonsError:(NSError **)error;
 - (NSArray *)GETAllResourcesError:(NSError **)error;
 - (NSArray *)GETAllResourceTypesError:(NSError **)error;
+- (NSArray *)GETAllRolesError:(NSError **)error;
 - (NSArray *)GETAllRoomsError:(NSError **)error;
 - (NSArray *)GETAllSessionsError:(NSError **)error;
+- (NSArray *)GETAllStudentsError:(NSError **)error;
+- (NSDictionary *)GETAllUsersError:(NSError **)error;
 
 @end

@@ -1,22 +1,37 @@
 PODS:
+  - SQKBeaconHelper (2.0.0)
   - SQKDataKit (0.5.2):
-    - SQKDataKit/ContextManager
-    - SQKDataKit/CoreDataOperation
-    - SQKDataKit/FetchedTableViewController
-    - SQKDataKit/ManagedObjectController
-    - SQKDataKit/ManagedObjectExtensions
+    - SQKDataKit/ContextManager (= 0.5.2)
+    - SQKDataKit/CoreDataOperation (= 0.5.2)
+    - SQKDataKit/FetchedCollectionViewController (= 0.5.2)
+    - SQKDataKit/FetchedTableViewController (= 0.5.2)
+    - SQKDataKit/ManagedObjectController (= 0.5.2)
+    - SQKDataKit/ManagedObjectExtensions (= 0.5.2)
   - SQKDataKit/ContextManager (0.5.2)
   - SQKDataKit/CoreDataOperation (0.5.2):
     - SQKDataKit/ContextManager
     - SQKDataKit/ManagedObjectExtensions
+  - SQKDataKit/FetchedCollectionViewController (0.5.2)
   - SQKDataKit/FetchedTableViewController (0.5.2)
   - SQKDataKit/ManagedObjectController (0.5.2)
   - SQKDataKit/ManagedObjectExtensions (0.5.2)
 
 DEPENDENCIES:
-  - SQKDataKit
+  - SQKBeaconHelper
+  - SQKDataKit (from `git@github.com:3squared/SQKDataKit.git`, commit `cdbade916f1856b0fff4be31dde888a507e76cb9`)
+
+EXTERNAL SOURCES:
+  SQKDataKit:
+    :commit: cdbade916f1856b0fff4be31dde888a507e76cb9
+    :git: git@github.com:3squared/SQKDataKit.git
+
+CHECKOUT OPTIONS:
+  SQKDataKit:
+    :commit: cdbade916f1856b0fff4be31dde888a507e76cb9
+    :git: git@github.com:3squared/SQKDataKit.git
 
 SPEC CHECKSUMS:
-  SQKDataKit: c69ed926c933b98375da0347ef6a0b09b14fb297
+  SQKBeaconHelper: ab9048400966948d1ebbaa6c361333caa4d69334
+  SQKDataKit: 928489a512864e5989d1592ac41f5707c046e12d
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.35.0
