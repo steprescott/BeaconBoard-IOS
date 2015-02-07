@@ -14,11 +14,6 @@
 
 + (void)syncData
 {
-    [DataSynchroniser syncDataWithUsername:nil];
-}
-
-+ (void)syncDataWithUsername:(NSString *)username
-{
     NSError *error;
     NSManagedObjectContext *context = [ContextManager newPrivateContext];
     
@@ -35,9 +30,8 @@
     [Course importCources:cources intoContext:context error:&error];
     
     //Lecturers
-    //Pass in the username so we can tell what user is logged in without the need for any more infomation
     NSArray *lecturers = [[WebClient sharedClient] GETAllLecturersError:&error];
-    [Lecturer importLecturers:lecturers intoContext:context withActiveUsername:username error:&error];
+    [Lecturer importLecturers:lecturers intoContext:context error:&error];
     
     //Lessons
     NSArray *lessons = [[WebClient sharedClient] GETAllLessonsError:&error];
@@ -64,23 +58,14 @@
     [Session importSessions:sessions intoContext:context error:&error];
     
     //Students
-    //Pass in the username so we can tell what user is logged in without the need for any more infomation
     NSArray *students = [[WebClient sharedClient] GETAllStudentsError:&error];
-    [Student importStudents:students intoContext:context withActiveUsername:username error:&error];
+    [Student importStudents:students intoContext:context error:&error];
     
-    //Clean up. Delete all objects that have not been sent down from the web service.
-    //This is to remove entities that might have been deleted on the web side but have previously been downloaded.
-    [Attendance deleteAllInvalidAttendancesInContext:context];
-    [Beacon deleteAllInvalidBeaconsInContext:context];
-    [Course deleteAllInvalidCoursesInContext:context];
-    [Lecturer deleteAllInvalidLecturersInContext:context];
-    [Lesson deleteAllInvalidLessonsInContext:context];
-    [Resource deleteAllInvalidResourcesInContext:context];
-    [ResourceType deleteAllInvalidResourceTypesInContext:context];
-    [Role deleteAllInvalidRolesInContext:context];
-    [Room deleteAllInvalidRoomsInContext:context];
-    [Session deleteAllInvalidSessionInContext:context];
-    [Student deleteAllInvalidStudentsInContext:context];
+    
+    NSDictionary *activeUserDetails = [[WebClient sharedClient] GETUserForRequestError:&error];
+    [User setActiveUserToUserWithID:activeUserDetails[@"UserID"] inContext:context];
+    
+    [DataSynchroniser deleteAllInvalidManagedObjectsInContext:context];
     
     if(error)
     {
@@ -96,6 +81,23 @@
             NSLog(@"Error %s. %@", __PRETTY_FUNCTION__, error.localizedDescription);
         }
     }
+}
+
++ (void)deleteAllInvalidManagedObjectsInContext:(NSManagedObjectContext *)context
+{
+    //Clean up. Delete all objects that have not been sent down from the web service.
+    //This is to remove entities that might have been deleted on the web side but have previously been downloaded.
+    [Attendance deleteAllInvalidAttendancesInContext:context];
+    [Beacon deleteAllInvalidBeaconsInContext:context];
+    [Course deleteAllInvalidCoursesInContext:context];
+    [Lecturer deleteAllInvalidLecturersInContext:context];
+    [Lesson deleteAllInvalidLessonsInContext:context];
+    [Resource deleteAllInvalidResourcesInContext:context];
+    [ResourceType deleteAllInvalidResourceTypesInContext:context];
+    [Role deleteAllInvalidRolesInContext:context];
+    [Room deleteAllInvalidRoomsInContext:context];
+    [Session deleteAllInvalidSessionInContext:context];
+    [Student deleteAllInvalidStudentsInContext:context];
 }
 
 @end

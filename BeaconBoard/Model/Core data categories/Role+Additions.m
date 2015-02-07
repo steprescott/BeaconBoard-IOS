@@ -26,6 +26,37 @@
                        error:error];
 }
 
++ (Role *)roleWithID:(NSString *)roleID inContext:(NSManagedObjectContext *)context
+{
+    NSError *error;
+    NSFetchRequest *request = [Role sqk_fetchRequest];
+    request.predicate = [NSPredicate predicateWithFormat:@"roleID = %@", roleID];
+    NSArray *roles = [context executeFetchRequest:request error:&error];
+    
+    if(error)
+    {
+        NSLog(@"Error %@", error);
+        return nil;
+    }
+    
+    if(roles.count > 1)
+    {
+        NSLog(@"More than one Role with the ID of '%@'. Returning last object.", roleID);
+    }
+    
+    return [roles lastObject];
+}
+
+- (BOOL)isLecturerRole
+{
+    return [self.name isEqualToString:@"Lecturer"];
+}
+
+- (BOOL)isStudentRole
+{
+    return [self.name isEqualToString:@"Student"];
+}
+
 + (void)deleteAllInvalidRolesInContext:(NSManagedObjectContext *)context
 {
     NSError *error;

@@ -10,7 +10,7 @@
 
 @interface Student (Additions)
 
-+ (void)importStudents:(NSArray *)students intoContext:(NSManagedObjectContext *)context withActiveUsername:(NSString *)username error:(NSError **)error;
++ (void)importStudents:(NSArray *)students intoContext:(NSManagedObjectContext *)context error:(NSError **)error;
 + (void)deleteAllInvalidStudentsInContext:(NSManagedObjectContext *)context;
 
 @end

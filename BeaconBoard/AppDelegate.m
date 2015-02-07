@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "BeaconDiscoveryMasterTableViewController.h"
 #import "DataSynchroniser.h"
 #import "WebClient.h"
 #import "ContextManager.h"
@@ -19,7 +18,8 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     // Override point for customization after application launch.
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
@@ -33,17 +33,7 @@
                          password:password
                           success:^(id responseObject) {
                               NSLog(@"Success");
-                              [DataSynchroniser syncDataWithUsername:username];
-                              User *activeUser = [User activeUserInContext:[ContextManager mainContext]];
-                              
-                              if([activeUser.role.name isEqualToString:@"Student"])
-                              {
-                                  NSLog(@"Student");
-                              }
-                              else if([activeUser.role.name isEqualToString:@"Lecturer"])
-                              {
-                                  NSLog(@"Lecturer");
-                              }
+                              [DataSynchroniser syncData];
                           } failure:^(NSError *error) {
                               NSLog(@"Error %@", error.localizedDescription);
                           }];

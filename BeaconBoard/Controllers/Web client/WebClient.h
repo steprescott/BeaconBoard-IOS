@@ -22,6 +22,7 @@ typedef NS_ENUM(NSUInteger, RequestType) {
 
 - (void)asyncLoginUsername:(NSString *)username password:(NSString *)password success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
+//GET all
 - (NSArray *)GETAllAttendancesError:(NSError **)error;
 - (NSArray *)GETAllBeaconsError:(NSError **)error;
 - (NSArray *)GETAllCourcesError:(NSError **)error;
@@ -34,5 +35,9 @@ typedef NS_ENUM(NSUInteger, RequestType) {
 - (NSArray *)GETAllSessionsError:(NSError **)error;
 - (NSArray *)GETAllStudentsError:(NSError **)error;
 - (NSDictionary *)GETAllUsersError:(NSError **)error;
+- (NSDictionary *)GETUserForRequestError:(NSError **)error;
 
+//GET with ID
+- (NSDictionary *)GETLecturerWithID:(NSString *)lecturerID error:(NSError **)error;
+- (NSDictionary *)GETStudentWithID:(NSString *)studentID error:(NSError **)error;
 @end

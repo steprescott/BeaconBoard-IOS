@@ -11,7 +11,8 @@
 NSString *const APIBaseURL = @"http://api.beaconboard.co.uk";
 NSString *const APIKey = @"DC3A8672-1976-4993-9DD3-C42875FF7684";
 
-NSString *const attendancesEndPoint   = @"Attendances";
+NSString *const activeUserEndPoint    = @"users/activeUser";
+NSString *const attendancesEndPoint   = @"attendances";
 NSString *const beaconsEndPoint       = @"beacons";
 NSString *const coursesEndPoint       = @"courses";
 NSString *const lecturersEndPoint     = @"lecturers";
@@ -84,7 +85,7 @@ WebClient static *sharedClient;
     }];
 }
 
-#pragma -mark GET All
+#pragma -mark GET all
 
 - (NSArray *)GETAllAttendancesError:(NSError **)error
 {
@@ -178,6 +179,32 @@ WebClient static *sharedClient;
 {
     NSURLRequest *request = [self requestOfType:RequestTypeGET
                                     forEndPoint:usersEndPoint
+                                 withParameters:nil];
+    return [self sendSynchronousRequest:request error:error];
+}
+
+- (NSDictionary *)GETUserForRequestError:(NSError **)error
+{
+    NSURLRequest *request = [self requestOfType:RequestTypeGET
+                                    forEndPoint:activeUserEndPoint
+                                 withParameters:nil];
+    return [self sendSynchronousRequest:request error:error];
+}
+
+#pragma -mark GET with ID
+
+- (NSDictionary *)GETLecturerWithID:(NSString *)lecturerID error:(NSError **)error
+{
+    NSURLRequest *request = [self requestOfType:RequestTypeGET
+                                    forEndPoint:[NSString stringWithFormat:@"%@/%@", lecturersEndPoint, lecturerID]
+                                 withParameters:nil];
+    return [self sendSynchronousRequest:request error:error];
+}
+
+- (NSDictionary *)GETStudentWithID:(NSString *)studentID error:(NSError **)error
+{
+    NSURLRequest *request = [self requestOfType:RequestTypeGET
+                                    forEndPoint:[NSString stringWithFormat:@"%@/%@", studentsEndPoint, studentID]
                                  withParameters:nil];
     return [self sendSynchronousRequest:request error:error];
 }

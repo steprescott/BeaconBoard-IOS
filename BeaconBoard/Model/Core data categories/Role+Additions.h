@@ -11,6 +11,10 @@
 @interface Role (Additions)
 
 + (void)importRoles:(NSArray *)roles intoContext:(NSManagedObjectContext *)context error:(NSError **)error;
++ (Role *)roleWithID:(NSString *)roleID inContext:(NSManagedObjectContext *)context;
 + (void)deleteAllInvalidRolesInContext:(NSManagedObjectContext *)context;
+
+- (BOOL)isLecturerRole;
+- (BOOL)isStudentRole;
 
 @end

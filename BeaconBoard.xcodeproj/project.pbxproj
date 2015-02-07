@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A2044271A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2044261A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m */; };
 		4A5FE59C1A697361002F5446 /* Course+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE59B1A697361002F5446 /* Course+Additions.m */; };
 		4A5FE59F1A69736D002F5446 /* Lesson+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE59E1A69736D002F5446 /* Lesson+Additions.m */; };
 		4A5FE5A21A697378002F5446 /* Resource+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5A11A697378002F5446 /* Resource+Additions.m */; };
@@ -57,8 +56,6 @@
 
 /* Begin PBXFileReference section */
 		02E4E4459F4AE97843E2B503 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A2044251A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconDiscoveryMasterTableViewController.h; sourceTree = "<group>"; };
-		4A2044261A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconDiscoveryMasterTableViewController.m; sourceTree = "<group>"; };
 		4A5FE59A1A697361002F5446 /* Course+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Course+Additions.h"; sourceTree = "<group>"; };
 		4A5FE59B1A697361002F5446 /* Course+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Course+Additions.m"; sourceTree = "<group>"; };
 		4A5FE59D1A69736D002F5446 /* Lesson+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lesson+Additions.h"; sourceTree = "<group>"; };
@@ -159,8 +156,6 @@
 		4A2044241A6C3A78003FE1D2 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A2044251A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.h */,
-				4A2044261A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -230,7 +225,7 @@
 		4AEB9B441A681AEF00482EDF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4AEB9B4D1A68230800482EDF /* Data importer */,
+				4AEB9B4D1A68230800482EDF /* Data synchroniser */,
 				4AEB9B491A681B2700482EDF /* Web client */,
 			);
 			path = Controllers;
@@ -288,12 +283,13 @@
 			path = "Web client";
 			sourceTree = "<group>";
 		};
-		4AEB9B4D1A68230800482EDF /* Data importer */ = {
+		4AEB9B4D1A68230800482EDF /* Data synchroniser */ = {
 			isa = PBXGroup;
 			children = (
 				4AEB9B4E1A68232800482EDF /* DataSynchroniser.h */,
 				4AEB9B4F1A68232800482EDF /* DataSynchroniser.m */,
 			);
+			name = "Data synchroniser";
 			path = "Data importer";
 			sourceTree = "<group>";
 		};
@@ -476,7 +472,6 @@
 				4A8964BE1A80E7870013C37F /* Student+Additions.m in Sources */,
 				4AEB9B211A6818CF00482EDF /* AppDelegate.m in Sources */,
 				4A620DF81A8593DB00EC3252 /* Course.m in Sources */,
-				4A2044271A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m in Sources */,
 				4A620DFB1A8593DB00EC3252 /* Role.m in Sources */,
 				4A620DF21A8593DB00EC3252 /* Lecturer.m in Sources */,
 				4AEB9B661A682B2F00482EDF /* Room+Additions.m in Sources */,

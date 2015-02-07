@@ -1,2 +1,1 @@
 pod 'SQKDataKit', :git => 'git@github.com:3squared/SQKDataKit.git', :commit => 'cdbade916f1856b0fff4be31dde888a507e76cb9'
-pod 'SQKBeaconHelper'

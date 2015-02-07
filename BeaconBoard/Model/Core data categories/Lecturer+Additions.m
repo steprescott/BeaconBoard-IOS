@@ -11,7 +11,7 @@
 
 @implementation Lecturer (Additions)
 
-+ (void)importLecturers:(NSArray *)lecturers intoContext:(NSManagedObjectContext *)context withActiveUsername:(NSString *)username error:(NSError **)error
++ (void)importLecturers:(NSArray *)lecturers intoContext:(NSManagedObjectContext *)context error:(NSError **)error
 {
     [Lecturer sqk_insertOrUpdate:lecturers
                   uniqueModelKey:@"userID"
@@ -24,7 +24,6 @@
                  managedObject.otherNames = ![dictionary[@"OtherNames"] isEqual:[NSNull null]] ? dictionary[@"OtherNames"] : nil;
                  managedObject.lastName = ![dictionary[@"LastName"] isEqual:[NSNull null]] ? dictionary[@"LastName"] : nil;
                  managedObject.emailAddress = ![dictionary[@"EmailAddress"] isEqual:[NSNull null]] ? dictionary[@"EmailAddress"] : nil;
-                 managedObject.isActiveUser = [managedObject.username isEqualToString:username] ? @YES : @NO;
                  
                  if(![dictionary[@"RoleID"] isEqual:[NSNull null]])
                  {

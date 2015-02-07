@@ -11,6 +11,5 @@
 @interface DataSynchroniser : NSObject
 
 + (void)syncData;
-+ (void)syncDataWithUsername:(NSString *)username;
 
 @end

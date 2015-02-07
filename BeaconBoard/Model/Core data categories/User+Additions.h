@@ -10,6 +10,11 @@
 
 @interface User (Additions)
 
++ (void)setActiveUserToUserWithID:(NSString *)userID inContext:(NSManagedObjectContext *)context;
++ (User *)userWithID:(NSString *)userID inContext:(NSManagedObjectContext *)context;
 + (User *)activeUserInContext:(NSManagedObjectContext *)context;
+
+- (BOOL)isLecturer;
+- (BOOL)isStudent;
 
 @end
