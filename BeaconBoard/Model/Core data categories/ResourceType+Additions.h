@@ -1,5 +1,5 @@
 //
-//  ResourceType+Addtions.h
+//  ResourceType+Additions.h
 //  BeaconBoard
 //
 //  Created by Ste Prescott on 16/01/2015.
@@ -8,8 +8,9 @@
 
 #import "ResourceType.h"
 
-@interface ResourceType (Addtions)
+@interface ResourceType (Additions)
 
 + (void)importResourceTypes:(NSArray *)resourceTypes intoContext:(NSManagedObjectContext *)context error:(NSError **)error;
++ (void)deleteAllInvalidResourceTypesInContext:(NSManagedObjectContext *)context;
 
 @end

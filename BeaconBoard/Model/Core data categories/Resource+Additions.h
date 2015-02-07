@@ -1,5 +1,5 @@
 //
-//  Resource+Addtions.h
+//  Resource+Additions.h
 //  BeaconBoard
 //
 //  Created by Ste Prescott on 16/01/2015.
@@ -8,8 +8,9 @@
 
 #import "Resource.h"
 
-@interface Resource (Addtions)
+@interface Resource (Additions)
 
 + (void)importResources:(NSArray *)resources intoContext:(NSManagedObjectContext *)context error:(NSError **)error;
++ (void)deleteAllInvalidResourcesInContext:(NSManagedObjectContext *)context;
 
 @end

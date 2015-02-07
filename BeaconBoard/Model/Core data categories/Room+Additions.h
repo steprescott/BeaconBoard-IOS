@@ -1,5 +1,5 @@
 //
-//  Room+Addtions.h
+//  Room+Additions.h
 //  BeaconBoard
 //
 //  Created by Ste Prescott on 15/01/2015.
@@ -8,8 +8,9 @@
 
 #import "Room.h"
 
-@interface Room (Addtions)
+@interface Room (Additions)
 
 + (void)importRooms:(NSArray *)rooms intoContext:(NSManagedObjectContext *)context error:(NSError **)error;
++ (void)deleteAllInvalidRoomsInContext:(NSManagedObjectContext *)context;
 
 @end

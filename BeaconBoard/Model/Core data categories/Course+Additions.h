@@ -1,5 +1,5 @@
 //
-//  Course+Addtions.h
+//  Course+Additions.h
 //  BeaconBoard
 //
 //  Created by Ste Prescott on 16/01/2015.
@@ -8,8 +8,9 @@
 
 #import "Course.h"
 
-@interface Course (Addtions)
+@interface Course (Additions)
 
 + (void)importCources:(NSArray *)cources intoContext:(NSManagedObjectContext *)context error:(NSError **)error;
++ (void)deleteAllInvalidCoursesInContext:(NSManagedObjectContext *)context;
 
 @end

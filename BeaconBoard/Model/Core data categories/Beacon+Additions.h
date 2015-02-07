@@ -1,5 +1,5 @@
 //
-//  Beacon+Addtions.h
+//  Beacon+Additions.h
 //  BeaconBoard
 //
 //  Created by Ste Prescott on 15/01/2015.
@@ -8,8 +8,10 @@
 
 #import "Beacon.h"
 
-@interface Beacon (Addtions)
+@interface Beacon (Additions)
 
 + (void)importBeacons:(NSArray *)beacons intoContext:(NSManagedObjectContext *)context error:(NSError **)error;
++ (void)deleteAllInvalidBeaconsInContext:(NSManagedObjectContext *)context;
++ (Beacon *)beaconWithMajor:(NSString *)major minor:(NSString *)minor inContext:(NSManagedObjectContext *)context;
 
 @end
