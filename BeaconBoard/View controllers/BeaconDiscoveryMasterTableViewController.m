@@ -7,6 +7,7 @@
 //
 
 #import "BeaconDiscoveryMasterTableViewController.h"
+#import "ContextManager.h"
 #import <SQKBeaconHelper/SQKBeaconHelper.h>
 
 NSString *const cellIdentifier = @"beaconCell";
@@ -24,6 +25,7 @@ typedef NS_ENUM(NSUInteger, TableViewSection) {
 
 @property (nonatomic, strong) NSArray *sortedDiscoveredBeaconKeys;
 @property (nonatomic, strong) NSDictionary *discoveredBeacons;
+@property (nonatomic, strong) Beacon *nearestBeacon;
 
 @end
 
@@ -60,7 +62,9 @@ typedef NS_ENUM(NSUInteger, TableViewSection) {
                                                       NSString *minor = beaconID[1];
                                                       CGFloat RSSI = [beaconsForRegion[beaconKey] floatValue];
                                                       
-                                                      NSLog(@"Beacon %@.%@ with RSSI of %f", major, minor, RSSI);
+                                                      self.nearestBeacon = [Beacon beaconWithMajor:major minor:minor inContext:[ContextManager mainContext]];
+                                                      NSLog(@"Beacon %@ with RSSI of %f", self.nearestBeacon, RSSI);
+                                                      
                                                   }
                                                   else
                                                   {
@@ -79,7 +83,8 @@ typedef NS_ENUM(NSUInteger, TableViewSection) {
                                                           NSString *minor = beaconID[1];
                                                           CGFloat RSSI = [beaconsForRegion[beacon1Key] floatValue];
                                                           
-                                                          NSLog(@"Beacon %@.%@ with RSSI of %f", major, minor, RSSI);
+                                                          self.nearestBeacon = [Beacon beaconWithMajor:major minor:minor inContext:[ContextManager mainContext]];
+                                                          NSLog(@"Beacon %@ with RSSI of %f", self.nearestBeacon, RSSI);
                                                       }
                                                       else
                                                       {
