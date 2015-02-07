@@ -1,22 +1,21 @@
 //
-//  Room.m
+//  Attendance.m
 //  BeaconBoard
 //
 //  Created by Ste Prescott on 07/02/2015.
 //  Copyright (c) 2015 Ste Prescott. All rights reserved.
 //
 
-#import "Room.h"
-#import "Beacon.h"
+#import "Attendance.h"
 #import "Session.h"
+#import "Student.h"
 
 
-@implementation Room
+@implementation Attendance
 
-@dynamic number;
-@dynamic roomID;
+@dynamic attendanceID;
 @dynamic hasBeenUpdated;
-@dynamic beacons;
-@dynamic sessions;
+@dynamic session;
+@dynamic student;
 
 @end

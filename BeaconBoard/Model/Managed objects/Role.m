@@ -1,22 +1,20 @@
 //
-//  Room.m
+//  Role.m
 //  BeaconBoard
 //
 //  Created by Ste Prescott on 07/02/2015.
 //  Copyright (c) 2015 Ste Prescott. All rights reserved.
 //
 
-#import "Room.h"
-#import "Beacon.h"
-#import "Session.h"
+#import "Role.h"
+#import "User.h"
 
 
-@implementation Room
+@implementation Role
 
-@dynamic number;
-@dynamic roomID;
+@dynamic name;
+@dynamic roleID;
 @dynamic hasBeenUpdated;
-@dynamic beacons;
-@dynamic sessions;
+@dynamic users;
 
 @end

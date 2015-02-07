@@ -2,7 +2,7 @@
 //  ResourceType.h
 //  BeaconBoard
 //
-//  Created by Ste Prescott on 16/01/2015.
+//  Created by Ste Prescott on 07/02/2015.
 //  Copyright (c) 2015 Ste Prescott. All rights reserved.
 //
 
@@ -13,9 +13,10 @@
 
 @interface ResourceType : NSManagedObject
 
-@property (nonatomic, retain) NSString * resourceTypeID;
-@property (nonatomic, retain) NSString * resourceTypeDescription;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * resourceTypeDescription;
+@property (nonatomic, retain) NSString * resourceTypeID;
+@property (nonatomic, retain) NSNumber * hasBeenUpdated;
 @property (nonatomic, retain) NSSet *resources;
 @end
 

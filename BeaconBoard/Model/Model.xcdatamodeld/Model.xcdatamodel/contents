@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6750" systemVersion="14C109" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Attendance" representedClassName="Attendance" syncable="YES">
+        <attribute name="attendanceID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="attendances" inverseEntity="Session" syncable="YES"/>
+        <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="attendances" inverseEntity="Student" syncable="YES"/>
+    </entity>
     <entity name="Beacon" representedClassName="Beacon" syncable="YES">
         <attribute name="beaconID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="major" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="minor" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="beacons" inverseEntity="Room" syncable="YES"/>
     </entity>
     <entity name="Course" representedClassName="Course" syncable="YES">
         <attribute name="courseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="lessons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lesson" inverseName="course" inverseEntity="Lesson" syncable="YES"/>
+        <relationship name="lecturers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lecturer" inverseName="courses" inverseEntity="Lecturer" syncable="YES"/>
+        <relationship name="lessons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lesson" inverseName="courses" inverseEntity="Lesson" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="courses" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Lecturer" representedClassName="Lecturer" parentEntity="User" syncable="YES">
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="lecturers" inverseEntity="Course" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="lecturers" inverseEntity="Session" syncable="YES"/>
     </entity>
     <entity name="Lesson" representedClassName="Lesson" syncable="YES">
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="lessonID" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="lessons" inverseEntity="Course" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="lessons" inverseEntity="Course" syncable="YES"/>
         <relationship name="reources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Resource" inverseName="lessons" inverseEntity="Resource" syncable="YES"/>
         <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="lesson" inverseEntity="Session" syncable="YES"/>
     </entity>
     <entity name="Resource" representedClassName="Resource" syncable="YES">
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="resourceDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,30 +42,61 @@
         <relationship name="resourceType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResourceType" inverseName="resources" inverseEntity="ResourceType" syncable="YES"/>
     </entity>
     <entity name="ResourceType" representedClassName="ResourceType" syncable="YES">
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="resourceTypeDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="resourceTypeID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="resources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Resource" inverseName="resourceType" inverseEntity="Resource" syncable="YES"/>
     </entity>
+    <entity name="Role" representedClassName="Role" syncable="YES">
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roleID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="role" inverseEntity="User" syncable="YES"/>
+    </entity>
     <entity name="Room" representedClassName="Room" syncable="YES">
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="roomID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="beacons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Beacon" inverseName="room" inverseEntity="Beacon" syncable="YES"/>
         <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="room" inverseEntity="Session" syncable="YES"/>
     </entity>
     <entity name="Session" representedClassName="Session" syncable="YES">
-        <attribute name="scheduledDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="scheduledEndDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="scheduledStartDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="sessionID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="attendances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attendance" inverseName="session" inverseEntity="Attendance" syncable="YES"/>
+        <relationship name="lecturers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lecturer" inverseName="sessions" inverseEntity="Lecturer" syncable="YES"/>
         <relationship name="lesson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lesson" inverseName="sessions" inverseEntity="Lesson" syncable="YES"/>
         <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="sessions" inverseEntity="Room" syncable="YES"/>
     </entity>
+    <entity name="Student" representedClassName="Student" parentEntity="User" syncable="YES">
+        <relationship name="attendances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attendance" inverseName="student" inverseEntity="Attendance" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="students" inverseEntity="Course" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="otherNames" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="role" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Role" inverseName="users" inverseEntity="Role" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Beacon" positionX="-1872" positionY="-33" width="128" height="103"/>
-        <element name="Room" positionX="-1656" positionY="-18" width="128" height="103"/>
-        <element name="Lesson" positionX="-1242" positionY="-33" width="128" height="103"/>
-        <element name="Session" positionX="-1449" positionY="-33" width="128" height="103"/>
-        <element name="Course" positionX="-1042" positionY="-63" width="128" height="88"/>
-        <element name="ResourceType" positionX="-848" positionY="126" width="137" height="103"/>
-        <element name="Resource" positionX="-1044" positionY="96" width="128" height="133"/>
+        <element name="Attendance" positionX="-1622" positionY="-295" width="128" height="105"/>
+        <element name="Beacon" positionX="-2007" positionY="-129" width="128" height="120"/>
+        <element name="Course" positionX="-1359" positionY="-55" width="128" height="133"/>
+        <element name="Lecturer" positionX="-1352" positionY="-180" width="128" height="75"/>
+        <element name="Lesson" positionX="-1368" positionY="113" width="128" height="118"/>
+        <element name="Resource" positionX="-1170" positionY="83" width="128" height="150"/>
+        <element name="ResourceType" positionX="-977" positionY="113" width="137" height="120"/>
+        <element name="Role" positionX="-1442" positionY="-390" width="128" height="103"/>
+        <element name="Room" positionX="-1811" positionY="-114" width="128" height="120"/>
+        <element name="Session" positionX="-1620" positionY="-144" width="128" height="165"/>
+        <element name="Student" positionX="-1143" positionY="-265" width="128" height="73"/>
+        <element name="User" positionX="-1253" positionY="-450" width="128" height="165"/>
     </elements>
 </model>

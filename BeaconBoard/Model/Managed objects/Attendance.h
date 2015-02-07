@@ -1,5 +1,5 @@
 //
-//  Beacon.h
+//  Attendance.h
 //  BeaconBoard
 //
 //  Created by Ste Prescott on 07/02/2015.
@@ -9,14 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Room;
+@class Session, Student;
 
-@interface Beacon : NSManagedObject
+@interface Attendance : NSManagedObject
 
-@property (nonatomic, retain) NSString * beaconID;
-@property (nonatomic, retain) NSNumber * major;
-@property (nonatomic, retain) NSNumber * minor;
+@property (nonatomic, retain) NSString * attendanceID;
 @property (nonatomic, retain) NSNumber * hasBeenUpdated;
-@property (nonatomic, retain) Room *room;
+@property (nonatomic, retain) Session *session;
+@property (nonatomic, retain) Student *student;
 
 @end

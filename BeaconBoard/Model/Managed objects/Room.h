@@ -2,7 +2,7 @@
 //  Room.h
 //  BeaconBoard
 //
-//  Created by Ste Prescott on 16/01/2015.
+//  Created by Ste Prescott on 07/02/2015.
 //  Copyright (c) 2015 Ste Prescott. All rights reserved.
 //
 
@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSString * number;
 @property (nonatomic, retain) NSString * roomID;
+@property (nonatomic, retain) NSNumber * hasBeenUpdated;
 @property (nonatomic, retain) NSSet *beacons;
 @property (nonatomic, retain) NSSet *sessions;
 @end
