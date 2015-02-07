@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>baseURL</key>
+	<string>api.beaconboard.co.uk/attendances</string>
+	<key>followRedirect</key>
+	<true/>
+	<key>handleJSONPCallbacks</key>
+	<false/>
+	<key>headers</key>
+	<array>
+		<dict>
+			<key>header</key>
+			<string>ApiKey</string>
+			<key>inUse</key>
+			<true/>
+			<key>value</key>
+			<string>DC3A8672-1976-4993-9DD3-C42875FF7684</string>
+		</dict>
+		<dict>
+			<key>header</key>
+			<string>UserToken</string>
+			<key>inUse</key>
+			<true/>
+			<key>value</key>
+			<string>4d61a3f0-8896-48ef-a427-6b707c9aeb96</string>
+		</dict>
+	</array>
+	<key>httpMethod</key>
+	<string>GET</string>
+	<key>jsonpScript</key>
+	<string></string>
+	<key>paramBodyUIChoice</key>
+	<integer>0</integer>
+	<key>parameters</key>
+	<array/>
+	<key>parametersType</key>
+	<integer>0</integer>
+	<key>presentBeforeChallenge</key>
+	<false/>
+	<key>stringEncoding</key>
+	<integer>4</integer>
+	<key>usingHTTPBody</key>
+	<false/>
+</dict>
+</plist>
