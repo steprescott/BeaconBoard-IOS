@@ -14,11 +14,12 @@
 
 @dynamic emailAddress;
 @dynamic firstName;
+@dynamic hasBeenUpdated;
 @dynamic lastName;
 @dynamic otherNames;
 @dynamic userID;
 @dynamic username;
-@dynamic hasBeenUpdated;
+@dynamic isActiveUser;
 @dynamic role;
 
 @end

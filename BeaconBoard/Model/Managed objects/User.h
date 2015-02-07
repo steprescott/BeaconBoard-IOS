@@ -15,11 +15,12 @@
 
 @property (nonatomic, retain) NSString * emailAddress;
 @property (nonatomic, retain) NSString * firstName;
+@property (nonatomic, retain) NSNumber * hasBeenUpdated;
 @property (nonatomic, retain) NSString * lastName;
 @property (nonatomic, retain) NSString * otherNames;
 @property (nonatomic, retain) NSString * userID;
 @property (nonatomic, retain) NSString * username;
-@property (nonatomic, retain) NSNumber * hasBeenUpdated;
+@property (nonatomic, retain) NSNumber * isActiveUser;
 @property (nonatomic, retain) Role *role;
 
 @end

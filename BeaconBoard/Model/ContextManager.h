@@ -20,6 +20,7 @@
 #import "Role+Additions.h"
 #import "Session+Additions.h"
 #import "Student+Additions.h"
+#import "User+Additions.h"
 
 @interface ContextManager : SQKContextManager
 

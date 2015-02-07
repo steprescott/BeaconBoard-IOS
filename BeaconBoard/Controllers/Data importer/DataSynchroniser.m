@@ -35,8 +35,9 @@
     [Course importCources:cources intoContext:context error:&error];
     
     //Lecturers
+    //Pass in the username so we can tell what user is logged in without the need for any more infomation
     NSArray *lecturers = [[WebClient sharedClient] GETAllLecturersError:&error];
-    [Lecturer importLecturers:lecturers intoContext:context error:&error];
+    [Lecturer importLecturers:lecturers intoContext:context withActiveUsername:username error:&error];
     
     //Lessons
     NSArray *lessons = [[WebClient sharedClient] GETAllLessonsError:&error];
@@ -63,8 +64,9 @@
     [Session importSessions:sessions intoContext:context error:&error];
     
     //Students
+    //Pass in the username so we can tell what user is logged in without the need for any more infomation
     NSArray *students = [[WebClient sharedClient] GETAllStudentsError:&error];
-    [Student importStudents:students intoContext:context error:&error];
+    [Student importStudents:students intoContext:context withActiveUsername:username error:&error];
     
     //Clean up. Delete all objects that have not been sent down from the web service.
     //This is to remove entities that might have been deleted on the web side but have previously been downloaded.

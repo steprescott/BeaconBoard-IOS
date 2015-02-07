@@ -11,7 +11,7 @@
 
 @implementation Student (Additions)
 
-+ (void)importStudents:(NSArray *)students intoContext:(NSManagedObjectContext *)context error:(NSError **)error
++ (void)importStudents:(NSArray *)students intoContext:(NSManagedObjectContext *)context withActiveUsername:(NSString *)username error:(NSError **)error
 {
     [Student sqk_insertOrUpdate:students
                  uniqueModelKey:@"userID"
@@ -23,6 +23,7 @@
                 managedObject.otherNames = ![dictionary[@"OtherNames"] isEqual:[NSNull null]] ? dictionary[@"OtherNames"] : nil;
                 managedObject.lastName = ![dictionary[@"LastName"] isEqual:[NSNull null]] ? dictionary[@"LastName"] : nil;
                 managedObject.emailAddress = ![dictionary[@"EmailAddress"] isEqual:[NSNull null]] ? dictionary[@"EmailAddress"] : nil;
+                managedObject.isActiveUser = [managedObject.username isEqualToString:username] ? @YES : @NO;
                 
                 if(![dictionary[@"RoleID"] isEqual:[NSNull null]])
                 {

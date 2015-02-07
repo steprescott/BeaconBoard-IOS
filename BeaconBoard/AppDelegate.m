@@ -34,6 +34,16 @@
                           success:^(id responseObject) {
                               NSLog(@"Success");
                               [DataSynchroniser syncDataWithUsername:username];
+                              User *activeUser = [User activeUserInContext:[ContextManager mainContext]];
+                              
+                              if([activeUser.role.name isEqualToString:@"Student"])
+                              {
+                                  NSLog(@"Student");
+                              }
+                              else if([activeUser.role.name isEqualToString:@"Lecturer"])
+                              {
+                                  NSLog(@"Lecturer");
+                              }
                           } failure:^(NSError *error) {
                               NSLog(@"Error %@", error.localizedDescription);
                           }];

@@ -10,7 +10,7 @@
 
 @interface Lecturer (Additions)
 
-+ (void)importLecturers:(NSArray *)lecturers intoContext:(NSManagedObjectContext *)context error:(NSError **)error;
++ (void)importLecturers:(NSArray *)lecturers intoContext:(NSManagedObjectContext *)context withActiveUsername:(NSString *)username error:(NSError **)error;
 + (void)deleteAllInvalidLecturersInContext:(NSManagedObjectContext *)context;
 
 @end

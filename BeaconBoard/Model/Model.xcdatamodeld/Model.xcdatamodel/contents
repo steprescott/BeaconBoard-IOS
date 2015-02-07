@@ -79,6 +79,7 @@
         <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isActiveUser" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="otherNames" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
@@ -97,6 +98,6 @@
         <element name="Room" positionX="-1811" positionY="-114" width="128" height="120"/>
         <element name="Session" positionX="-1620" positionY="-144" width="128" height="165"/>
         <element name="Student" positionX="-1143" positionY="-265" width="128" height="73"/>
-        <element name="User" positionX="-1253" positionY="-450" width="128" height="165"/>
+        <element name="User" positionX="-1253" positionY="-450" width="128" height="180"/>
     </elements>
 </model>
