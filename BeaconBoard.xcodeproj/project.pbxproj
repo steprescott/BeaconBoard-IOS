@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		4A2044271A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2044261A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m */; };
-		4A5FE59C1A697361002F5446 /* Course+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE59B1A697361002F5446 /* Course+Addtions.m */; };
-		4A5FE59F1A69736D002F5446 /* Lesson+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE59E1A69736D002F5446 /* Lesson+Addtions.m */; };
-		4A5FE5A21A697378002F5446 /* Resource+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5A11A697378002F5446 /* Resource+Addtions.m */; };
-		4A5FE5A51A697386002F5446 /* ResourceType+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5A41A697386002F5446 /* ResourceType+Addtions.m */; };
-		4A5FE5A81A697399002F5446 /* Session+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5A71A697399002F5446 /* Session+Addtions.m */; };
-		4A5FE5B11A697B3C002F5446 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5B01A697B3C002F5446 /* Room.m */; };
-		4A5FE5B41A697B3C002F5446 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5B31A697B3C002F5446 /* Course.m */; };
-		4A5FE5B71A697B3D002F5446 /* ResourceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5B61A697B3D002F5446 /* ResourceType.m */; };
-		4A5FE5BA1A697B3D002F5446 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5B91A697B3D002F5446 /* Resource.m */; };
-		4A5FE5BD1A697B3D002F5446 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5BC1A697B3D002F5446 /* Lesson.m */; };
-		4A5FE5C01A697B3D002F5446 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5BF1A697B3D002F5446 /* Session.m */; };
+		4A5FE59C1A697361002F5446 /* Course+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE59B1A697361002F5446 /* Course+Additions.m */; };
+		4A5FE59F1A69736D002F5446 /* Lesson+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE59E1A69736D002F5446 /* Lesson+Additions.m */; };
+		4A5FE5A21A697378002F5446 /* Resource+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5A11A697378002F5446 /* Resource+Additions.m */; };
+		4A5FE5A51A697386002F5446 /* ResourceType+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5A41A697386002F5446 /* ResourceType+Additions.m */; };
+		4A5FE5A81A697399002F5446 /* Session+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5A71A697399002F5446 /* Session+Additions.m */; };
+		4A620DE31A856F0100EC3252 /* Role+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620DE21A856F0100EC3252 /* Role+Additions.m */; };
+		4A620DE61A8571E900EC3252 /* Lecturer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620DE51A8571E900EC3252 /* Lecturer+Additions.m */; };
+		4A620DE91A8593DA00EC3252 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620DE81A8593DA00EC3252 /* Resource.m */; };
+		4A620DEC1A8593DB00EC3252 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620DEB1A8593DB00EC3252 /* Session.m */; };
+		4A620DF21A8593DB00EC3252 /* Lecturer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620DF11A8593DB00EC3252 /* Lecturer.m */; };
+		4A620DF51A8593DB00EC3252 /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620DF41A8593DB00EC3252 /* Beacon.m */; };
+		4A620DF81A8593DB00EC3252 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620DF71A8593DB00EC3252 /* Course.m */; };
+		4A620DFB1A8593DB00EC3252 /* Role.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620DFA1A8593DB00EC3252 /* Role.m */; };
+		4A620DFE1A8593DB00EC3252 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620DFD1A8593DB00EC3252 /* User.m */; };
+		4A620E011A8593DB00EC3252 /* ResourceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620E001A8593DB00EC3252 /* ResourceType.m */; };
+		4A620E041A8593DB00EC3252 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620E031A8593DB00EC3252 /* Student.m */; };
+		4A620E071A8593DB00EC3252 /* Attendance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620E061A8593DB00EC3252 /* Attendance.m */; };
+		4A620E0A1A8593DB00EC3252 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620E091A8593DB00EC3252 /* Room.m */; };
+		4A620E0D1A85986000EC3252 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620E0C1A85986000EC3252 /* Lesson.m */; };
+		4A8964BB1A80E65B0013C37F /* Attendance+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8964BA1A80E65B0013C37F /* Attendance+Additions.m */; };
+		4A8964BE1A80E7870013C37F /* Student+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8964BD1A80E7870013C37F /* Student+Additions.m */; };
 		4AEB9B1E1A6818CF00482EDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B1D1A6818CF00482EDF /* main.m */; };
 		4AEB9B211A6818CF00482EDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B201A6818CF00482EDF /* AppDelegate.m */; };
 		4AEB9B2A1A6818CF00482EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AEB9B281A6818CF00482EDF /* Main.storyboard */; };
@@ -28,10 +38,9 @@
 		4AEB9B4C1A681B3300482EDF /* WebClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B4B1A681B3300482EDF /* WebClient.m */; };
 		4AEB9B501A68232800482EDF /* DataSynchroniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B4F1A68232800482EDF /* DataSynchroniser.m */; };
 		4AEB9B531A68271F00482EDF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B511A68271F00482EDF /* Model.xcdatamodeld */; };
-		4AEB9B5F1A6827DB00482EDF /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B5C1A6827DB00482EDF /* Beacon.m */; };
 		4AEB9B631A6829B900482EDF /* ContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B621A6829B900482EDF /* ContextManager.m */; };
-		4AEB9B661A682B2F00482EDF /* Room+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B651A682B2F00482EDF /* Room+Addtions.m */; };
-		4AEB9B691A682B4600482EDF /* Beacon+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B681A682B4600482EDF /* Beacon+Addtions.m */; };
+		4AEB9B661A682B2F00482EDF /* Room+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B651A682B2F00482EDF /* Room+Additions.m */; };
+		4AEB9B691A682B4600482EDF /* Beacon+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B681A682B4600482EDF /* Beacon+Additions.m */; };
 		A6DEFECAD9308EF9C4667957 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E4E4459F4AE97843E2B503 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -49,28 +58,48 @@
 		02E4E4459F4AE97843E2B503 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2044251A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconDiscoveryMasterTableViewController.h; sourceTree = "<group>"; };
 		4A2044261A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconDiscoveryMasterTableViewController.m; sourceTree = "<group>"; };
-		4A5FE59A1A697361002F5446 /* Course+Addtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Course+Addtions.h"; sourceTree = "<group>"; };
-		4A5FE59B1A697361002F5446 /* Course+Addtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Course+Addtions.m"; sourceTree = "<group>"; };
-		4A5FE59D1A69736D002F5446 /* Lesson+Addtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lesson+Addtions.h"; sourceTree = "<group>"; };
-		4A5FE59E1A69736D002F5446 /* Lesson+Addtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Lesson+Addtions.m"; sourceTree = "<group>"; };
-		4A5FE5A01A697378002F5446 /* Resource+Addtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Resource+Addtions.h"; sourceTree = "<group>"; };
-		4A5FE5A11A697378002F5446 /* Resource+Addtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Resource+Addtions.m"; sourceTree = "<group>"; };
-		4A5FE5A31A697386002F5446 /* ResourceType+Addtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ResourceType+Addtions.h"; sourceTree = "<group>"; };
-		4A5FE5A41A697386002F5446 /* ResourceType+Addtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ResourceType+Addtions.m"; sourceTree = "<group>"; };
-		4A5FE5A61A697399002F5446 /* Session+Addtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Session+Addtions.h"; sourceTree = "<group>"; };
-		4A5FE5A71A697399002F5446 /* Session+Addtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Session+Addtions.m"; sourceTree = "<group>"; };
-		4A5FE5AF1A697B3C002F5446 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
-		4A5FE5B01A697B3C002F5446 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
-		4A5FE5B21A697B3C002F5446 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
-		4A5FE5B31A697B3C002F5446 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
-		4A5FE5B51A697B3D002F5446 /* ResourceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceType.h; sourceTree = "<group>"; };
-		4A5FE5B61A697B3D002F5446 /* ResourceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceType.m; sourceTree = "<group>"; };
-		4A5FE5B81A697B3D002F5446 /* Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
-		4A5FE5B91A697B3D002F5446 /* Resource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resource.m; sourceTree = "<group>"; };
-		4A5FE5BB1A697B3D002F5446 /* Lesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lesson.h; sourceTree = "<group>"; };
-		4A5FE5BC1A697B3D002F5446 /* Lesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lesson.m; sourceTree = "<group>"; };
-		4A5FE5BE1A697B3D002F5446 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
-		4A5FE5BF1A697B3D002F5446 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		4A5FE59A1A697361002F5446 /* Course+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Course+Additions.h"; sourceTree = "<group>"; };
+		4A5FE59B1A697361002F5446 /* Course+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Course+Additions.m"; sourceTree = "<group>"; };
+		4A5FE59D1A69736D002F5446 /* Lesson+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lesson+Additions.h"; sourceTree = "<group>"; };
+		4A5FE59E1A69736D002F5446 /* Lesson+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Lesson+Additions.m"; sourceTree = "<group>"; };
+		4A5FE5A01A697378002F5446 /* Resource+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Resource+Additions.h"; sourceTree = "<group>"; };
+		4A5FE5A11A697378002F5446 /* Resource+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Resource+Additions.m"; sourceTree = "<group>"; };
+		4A5FE5A31A697386002F5446 /* ResourceType+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ResourceType+Additions.h"; sourceTree = "<group>"; };
+		4A5FE5A41A697386002F5446 /* ResourceType+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ResourceType+Additions.m"; sourceTree = "<group>"; };
+		4A5FE5A61A697399002F5446 /* Session+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Session+Additions.h"; sourceTree = "<group>"; };
+		4A5FE5A71A697399002F5446 /* Session+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Session+Additions.m"; sourceTree = "<group>"; };
+		4A620DE11A856F0100EC3252 /* Role+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Role+Additions.h"; sourceTree = "<group>"; };
+		4A620DE21A856F0100EC3252 /* Role+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Role+Additions.m"; sourceTree = "<group>"; };
+		4A620DE41A8571E900EC3252 /* Lecturer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lecturer+Additions.h"; sourceTree = "<group>"; };
+		4A620DE51A8571E900EC3252 /* Lecturer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Lecturer+Additions.m"; sourceTree = "<group>"; };
+		4A620DE71A8593DA00EC3252 /* Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
+		4A620DE81A8593DA00EC3252 /* Resource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resource.m; sourceTree = "<group>"; };
+		4A620DEA1A8593DB00EC3252 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		4A620DEB1A8593DB00EC3252 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		4A620DF01A8593DB00EC3252 /* Lecturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lecturer.h; sourceTree = "<group>"; };
+		4A620DF11A8593DB00EC3252 /* Lecturer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lecturer.m; sourceTree = "<group>"; };
+		4A620DF31A8593DB00EC3252 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
+		4A620DF41A8593DB00EC3252 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
+		4A620DF61A8593DB00EC3252 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		4A620DF71A8593DB00EC3252 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		4A620DF91A8593DB00EC3252 /* Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Role.h; sourceTree = "<group>"; };
+		4A620DFA1A8593DB00EC3252 /* Role.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Role.m; sourceTree = "<group>"; };
+		4A620DFC1A8593DB00EC3252 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		4A620DFD1A8593DB00EC3252 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		4A620DFF1A8593DB00EC3252 /* ResourceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceType.h; sourceTree = "<group>"; };
+		4A620E001A8593DB00EC3252 /* ResourceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceType.m; sourceTree = "<group>"; };
+		4A620E021A8593DB00EC3252 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		4A620E031A8593DB00EC3252 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		4A620E051A8593DB00EC3252 /* Attendance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attendance.h; sourceTree = "<group>"; };
+		4A620E061A8593DB00EC3252 /* Attendance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attendance.m; sourceTree = "<group>"; };
+		4A620E081A8593DB00EC3252 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		4A620E091A8593DB00EC3252 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		4A620E0B1A85986000EC3252 /* Lesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lesson.h; sourceTree = "<group>"; };
+		4A620E0C1A85986000EC3252 /* Lesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lesson.m; sourceTree = "<group>"; };
+		4A8964B91A80E65B0013C37F /* Attendance+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Attendance+Additions.h"; sourceTree = "<group>"; };
+		4A8964BA1A80E65B0013C37F /* Attendance+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Attendance+Additions.m"; sourceTree = "<group>"; };
+		4A8964BC1A80E7870013C37F /* Student+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Additions.h"; sourceTree = "<group>"; };
+		4A8964BD1A80E7870013C37F /* Student+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Additions.m"; sourceTree = "<group>"; };
 		4AEB9B181A6818CF00482EDF /* BeaconBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEB9B1C1A6818CF00482EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AEB9B1D1A6818CF00482EDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,14 +116,12 @@
 		4AEB9B4E1A68232800482EDF /* DataSynchroniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSynchroniser.h; sourceTree = "<group>"; };
 		4AEB9B4F1A68232800482EDF /* DataSynchroniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSynchroniser.m; sourceTree = "<group>"; };
 		4AEB9B521A68271F00482EDF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		4AEB9B5B1A6827DB00482EDF /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
-		4AEB9B5C1A6827DB00482EDF /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
 		4AEB9B611A6829B900482EDF /* ContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextManager.h; sourceTree = "<group>"; };
 		4AEB9B621A6829B900482EDF /* ContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextManager.m; sourceTree = "<group>"; };
-		4AEB9B641A682B2F00482EDF /* Room+Addtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Room+Addtions.h"; sourceTree = "<group>"; };
-		4AEB9B651A682B2F00482EDF /* Room+Addtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Room+Addtions.m"; sourceTree = "<group>"; };
-		4AEB9B671A682B4600482EDF /* Beacon+Addtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Beacon+Addtions.h"; sourceTree = "<group>"; };
-		4AEB9B681A682B4600482EDF /* Beacon+Addtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Beacon+Addtions.m"; sourceTree = "<group>"; };
+		4AEB9B641A682B2F00482EDF /* Room+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Room+Additions.h"; sourceTree = "<group>"; };
+		4AEB9B651A682B2F00482EDF /* Room+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Room+Additions.m"; sourceTree = "<group>"; };
+		4AEB9B671A682B4600482EDF /* Beacon+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Beacon+Additions.h"; sourceTree = "<group>"; };
+		4AEB9B681A682B4600482EDF /* Beacon+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Beacon+Additions.m"; sourceTree = "<group>"; };
 		BF6801BEF2C93B334294DC6C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E740FF83AE73B27C97621286 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,20 +248,28 @@
 		4AEB9B461A681AEF00482EDF /* Core data categories */ = {
 			isa = PBXGroup;
 			children = (
-				4AEB9B671A682B4600482EDF /* Beacon+Addtions.h */,
-				4AEB9B681A682B4600482EDF /* Beacon+Addtions.m */,
-				4A5FE59A1A697361002F5446 /* Course+Addtions.h */,
-				4A5FE59B1A697361002F5446 /* Course+Addtions.m */,
-				4A5FE59D1A69736D002F5446 /* Lesson+Addtions.h */,
-				4A5FE59E1A69736D002F5446 /* Lesson+Addtions.m */,
-				4A5FE5A01A697378002F5446 /* Resource+Addtions.h */,
-				4A5FE5A11A697378002F5446 /* Resource+Addtions.m */,
-				4A5FE5A31A697386002F5446 /* ResourceType+Addtions.h */,
-				4A5FE5A41A697386002F5446 /* ResourceType+Addtions.m */,
-				4AEB9B641A682B2F00482EDF /* Room+Addtions.h */,
-				4AEB9B651A682B2F00482EDF /* Room+Addtions.m */,
-				4A5FE5A61A697399002F5446 /* Session+Addtions.h */,
-				4A5FE5A71A697399002F5446 /* Session+Addtions.m */,
+				4A8964B91A80E65B0013C37F /* Attendance+Additions.h */,
+				4A8964BA1A80E65B0013C37F /* Attendance+Additions.m */,
+				4AEB9B671A682B4600482EDF /* Beacon+Additions.h */,
+				4AEB9B681A682B4600482EDF /* Beacon+Additions.m */,
+				4A5FE59A1A697361002F5446 /* Course+Additions.h */,
+				4A5FE59B1A697361002F5446 /* Course+Additions.m */,
+				4A620DE41A8571E900EC3252 /* Lecturer+Additions.h */,
+				4A620DE51A8571E900EC3252 /* Lecturer+Additions.m */,
+				4A5FE59D1A69736D002F5446 /* Lesson+Additions.h */,
+				4A5FE59E1A69736D002F5446 /* Lesson+Additions.m */,
+				4A5FE5A01A697378002F5446 /* Resource+Additions.h */,
+				4A5FE5A11A697378002F5446 /* Resource+Additions.m */,
+				4A5FE5A31A697386002F5446 /* ResourceType+Additions.h */,
+				4A5FE5A41A697386002F5446 /* ResourceType+Additions.m */,
+				4A620DE11A856F0100EC3252 /* Role+Additions.h */,
+				4A620DE21A856F0100EC3252 /* Role+Additions.m */,
+				4AEB9B641A682B2F00482EDF /* Room+Additions.h */,
+				4AEB9B651A682B2F00482EDF /* Room+Additions.m */,
+				4A5FE5A61A697399002F5446 /* Session+Additions.h */,
+				4A5FE5A71A697399002F5446 /* Session+Additions.m */,
+				4A8964BC1A80E7870013C37F /* Student+Additions.h */,
+				4A8964BD1A80E7870013C37F /* Student+Additions.m */,
 			);
 			path = "Core data categories";
 			sourceTree = "<group>";
@@ -260,20 +295,30 @@
 		4AEB9B5A1A6827DB00482EDF /* Managed objects */ = {
 			isa = PBXGroup;
 			children = (
-				4AEB9B5B1A6827DB00482EDF /* Beacon.h */,
-				4AEB9B5C1A6827DB00482EDF /* Beacon.m */,
-				4A5FE5B21A697B3C002F5446 /* Course.h */,
-				4A5FE5B31A697B3C002F5446 /* Course.m */,
-				4A5FE5BB1A697B3D002F5446 /* Lesson.h */,
-				4A5FE5BC1A697B3D002F5446 /* Lesson.m */,
-				4A5FE5B81A697B3D002F5446 /* Resource.h */,
-				4A5FE5B91A697B3D002F5446 /* Resource.m */,
-				4A5FE5B51A697B3D002F5446 /* ResourceType.h */,
-				4A5FE5B61A697B3D002F5446 /* ResourceType.m */,
-				4A5FE5AF1A697B3C002F5446 /* Room.h */,
-				4A5FE5B01A697B3C002F5446 /* Room.m */,
-				4A5FE5BE1A697B3D002F5446 /* Session.h */,
-				4A5FE5BF1A697B3D002F5446 /* Session.m */,
+				4A620E051A8593DB00EC3252 /* Attendance.h */,
+				4A620E061A8593DB00EC3252 /* Attendance.m */,
+				4A620DF31A8593DB00EC3252 /* Beacon.h */,
+				4A620DF41A8593DB00EC3252 /* Beacon.m */,
+				4A620DF61A8593DB00EC3252 /* Course.h */,
+				4A620DF71A8593DB00EC3252 /* Course.m */,
+				4A620DF01A8593DB00EC3252 /* Lecturer.h */,
+				4A620DF11A8593DB00EC3252 /* Lecturer.m */,
+				4A620E0B1A85986000EC3252 /* Lesson.h */,
+				4A620E0C1A85986000EC3252 /* Lesson.m */,
+				4A620DE71A8593DA00EC3252 /* Resource.h */,
+				4A620DE81A8593DA00EC3252 /* Resource.m */,
+				4A620DFF1A8593DB00EC3252 /* ResourceType.h */,
+				4A620E001A8593DB00EC3252 /* ResourceType.m */,
+				4A620DF91A8593DB00EC3252 /* Role.h */,
+				4A620DFA1A8593DB00EC3252 /* Role.m */,
+				4A620E081A8593DB00EC3252 /* Room.h */,
+				4A620E091A8593DB00EC3252 /* Room.m */,
+				4A620DEA1A8593DB00EC3252 /* Session.h */,
+				4A620DEB1A8593DB00EC3252 /* Session.m */,
+				4A620E021A8593DB00EC3252 /* Student.h */,
+				4A620E031A8593DB00EC3252 /* Student.m */,
+				4A620DFC1A8593DB00EC3252 /* User.h */,
+				4A620DFD1A8593DB00EC3252 /* User.m */,
 			);
 			path = "Managed objects";
 			sourceTree = "<group>";
@@ -422,27 +467,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A5FE5B11A697B3C002F5446 /* Room.m in Sources */,
+				4A620E0A1A8593DB00EC3252 /* Room.m in Sources */,
+				4A8964BE1A80E7870013C37F /* Student+Additions.m in Sources */,
 				4AEB9B211A6818CF00482EDF /* AppDelegate.m in Sources */,
-				4A5FE5BD1A697B3D002F5446 /* Lesson.m in Sources */,
+				4A620DF81A8593DB00EC3252 /* Course.m in Sources */,
 				4A2044271A6C3A85003FE1D2 /* BeaconDiscoveryMasterTableViewController.m in Sources */,
-				4A5FE5B71A697B3D002F5446 /* ResourceType.m in Sources */,
-				4AEB9B661A682B2F00482EDF /* Room+Addtions.m in Sources */,
+				4A620DFB1A8593DB00EC3252 /* Role.m in Sources */,
+				4A620DF21A8593DB00EC3252 /* Lecturer.m in Sources */,
+				4AEB9B661A682B2F00482EDF /* Room+Additions.m in Sources */,
+				4A620DE91A8593DA00EC3252 /* Resource.m in Sources */,
+				4A620DE61A8571E900EC3252 /* Lecturer+Additions.m in Sources */,
 				4AEB9B501A68232800482EDF /* DataSynchroniser.m in Sources */,
-				4A5FE5B41A697B3C002F5446 /* Course.m in Sources */,
-				4A5FE5A21A697378002F5446 /* Resource+Addtions.m in Sources */,
-				4A5FE5BA1A697B3D002F5446 /* Resource.m in Sources */,
+				4A5FE5A21A697378002F5446 /* Resource+Additions.m in Sources */,
+				4A620E011A8593DB00EC3252 /* ResourceType.m in Sources */,
 				4AEB9B531A68271F00482EDF /* Model.xcdatamodeld in Sources */,
-				4A5FE59F1A69736D002F5446 /* Lesson+Addtions.m in Sources */,
-				4A5FE5A81A697399002F5446 /* Session+Addtions.m in Sources */,
+				4A5FE59F1A69736D002F5446 /* Lesson+Additions.m in Sources */,
+				4A5FE5A81A697399002F5446 /* Session+Additions.m in Sources */,
+				4A620E041A8593DB00EC3252 /* Student.m in Sources */,
 				4AEB9B631A6829B900482EDF /* ContextManager.m in Sources */,
-				4AEB9B691A682B4600482EDF /* Beacon+Addtions.m in Sources */,
-				4AEB9B5F1A6827DB00482EDF /* Beacon.m in Sources */,
+				4AEB9B691A682B4600482EDF /* Beacon+Additions.m in Sources */,
 				4AEB9B4C1A681B3300482EDF /* WebClient.m in Sources */,
-				4A5FE5C01A697B3D002F5446 /* Session.m in Sources */,
-				4A5FE59C1A697361002F5446 /* Course+Addtions.m in Sources */,
+				4A620DFE1A8593DB00EC3252 /* User.m in Sources */,
+				4A5FE59C1A697361002F5446 /* Course+Additions.m in Sources */,
 				4AEB9B1E1A6818CF00482EDF /* main.m in Sources */,
-				4A5FE5A51A697386002F5446 /* ResourceType+Addtions.m in Sources */,
+				4A620DEC1A8593DB00EC3252 /* Session.m in Sources */,
+				4A8964BB1A80E65B0013C37F /* Attendance+Additions.m in Sources */,
+				4A620E071A8593DB00EC3252 /* Attendance.m in Sources */,
+				4A620DF51A8593DB00EC3252 /* Beacon.m in Sources */,
+				4A620E0D1A85986000EC3252 /* Lesson.m in Sources */,
+				4A5FE5A51A697386002F5446 /* ResourceType+Additions.m in Sources */,
+				4A620DE31A856F0100EC3252 /* Role+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
