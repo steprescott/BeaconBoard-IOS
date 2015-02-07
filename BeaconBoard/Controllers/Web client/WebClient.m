@@ -8,26 +8,32 @@
 
 #import "WebClient.h"
 
-NSString *const APIBaseURL = @"http://api.beaconboard.co.uk/api";
-NSString *const APIKey = @"API_KEY";
+NSString *const APIBaseURL = @"http://api.beaconboard.co.uk";
+NSString *const APIKey = @"DC3A8672-1976-4993-9DD3-C42875FF7684";
 
-NSString *const beaconEndPoint       = @"beacon";
-NSString *const courseEndPoint       = @"course";
-NSString *const lessonEndPoint       = @"lesson";
-NSString *const resourceEndPoint     = @"resource";
-NSString *const resourceTypeEndPoint = @"resourceType";
-NSString *const roomEndPoint         = @"room";
-NSString *const sessionEndPoint      = @"session";
+NSString *const attendancesEndPoint   = @"Attendances";
+NSString *const beaconsEndPoint       = @"beacons";
+NSString *const coursesEndPoint       = @"courses";
+NSString *const lecturersEndPoint     = @"lecturers";
+NSString *const lessonsEndPoint       = @"lessons";
+NSString *const resourcesEndPoint     = @"resources";
+NSString *const resourceTypesEndPoint = @"resourceTypes";
+NSString *const rolesEndPoint         = @"roles";
+NSString *const roomsEndPoint         = @"rooms";
+NSString *const sessionsEndPoint      = @"sessions";
+NSString *const studentsEndPoint      = @"students";
+NSString *const tokensEndPoint        = @"tokens";
+NSString *const usersEndPoint         = @"users";
 
-NSString *const WebClientErrorDomain = @"me.ste.WebClientErrorDomain";
-NSString *const HTTPErrorDomain      = @"me.ste.HTTPErrorDomain";
-NSString *const WebClientErrorReason = @"WebClientErrorReason";
+NSString *const WebClientErrorDomain  = @"me.ste.WebClientErrorDomain";
+NSString *const HTTPErrorDomain       = @"me.ste.HTTPErrorDomain";
+NSString *const WebClientErrorReason  = @"WebClientErrorReason";
 
 WebClient static *sharedClient;
 
 @interface WebClient()
 
-@property (nonatomic, strong) NSString *userToken;
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
 
 @end
 
@@ -49,12 +55,49 @@ WebClient static *sharedClient;
     return sharedInstance;
 }
 
+#pragma -mark Async login
+
+- (void)asyncLoginUsername:(NSString *)username password:(NSString *)password success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure
+{
+    self.operationQueue = [[NSOperationQueue alloc] init];
+    
+    [self.operationQueue addOperationWithBlock:^{
+        NSURLRequest *request = [self requestOfType:RequestTypePOST
+                                        forEndPoint:tokensEndPoint
+                                     withParameters:@{@"Username" : username,
+                                                      @"Password" : password}];
+        
+        NSError *error = nil;
+        NSDictionary *responseObject = [self sendSynchronousRequest:request error:&error];
+        self.userToken = responseObject[@"UserToken"];
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
+            if (error) {
+                if (failure) {
+                    failure(error);
+                }
+            }
+            else if (success) {
+                success(responseObject);
+            }
+        }];
+    }];
+}
+
 #pragma -mark GET All
+
+- (NSArray *)GETAllAttendancesError:(NSError **)error
+{
+    NSURLRequest *request = [self requestOfType:RequestTypeGET
+                                    forEndPoint:attendancesEndPoint
+                                 withParameters:nil];
+    return [self sendSynchronousRequest:request error:error];
+}
 
 - (NSArray *)GETAllBeaconsError:(NSError **)error
 {
     NSURLRequest *request = [self requestOfType:RequestTypeGET
-                                    forEndPoint:beaconEndPoint
+                                    forEndPoint:beaconsEndPoint
                                  withParameters:nil];
     return [self sendSynchronousRequest:request error:error];
 }
@@ -62,7 +105,15 @@ WebClient static *sharedClient;
 - (NSArray *)GETAllCourcesError:(NSError **)error
 {
     NSURLRequest *request = [self requestOfType:RequestTypeGET
-                                    forEndPoint:courseEndPoint
+                                    forEndPoint:coursesEndPoint
+                                 withParameters:nil];
+    return [self sendSynchronousRequest:request error:error];
+}
+
+- (NSArray *)GETAllLecturersError:(NSError **)error
+{
+    NSURLRequest *request = [self requestOfType:RequestTypeGET
+                                    forEndPoint:lecturersEndPoint
                                  withParameters:nil];
     return [self sendSynchronousRequest:request error:error];
 }
@@ -70,7 +121,7 @@ WebClient static *sharedClient;
 - (NSArray *)GETAllLessonsError:(NSError **)error
 {
     NSURLRequest *request = [self requestOfType:RequestTypeGET
-                                    forEndPoint:lessonEndPoint
+                                    forEndPoint:lessonsEndPoint
                                  withParameters:nil];
     return [self sendSynchronousRequest:request error:error];
 }
@@ -78,7 +129,7 @@ WebClient static *sharedClient;
 - (NSArray *)GETAllResourcesError:(NSError **)error
 {
     NSURLRequest *request = [self requestOfType:RequestTypeGET
-                                    forEndPoint:resourceEndPoint
+                                    forEndPoint:resourcesEndPoint
                                  withParameters:nil];
     return [self sendSynchronousRequest:request error:error];
 }
@@ -86,7 +137,15 @@ WebClient static *sharedClient;
 - (NSArray *)GETAllResourceTypesError:(NSError **)error
 {
     NSURLRequest *request = [self requestOfType:RequestTypeGET
-                                    forEndPoint:resourceTypeEndPoint
+                                    forEndPoint:resourceTypesEndPoint
+                                 withParameters:nil];
+    return [self sendSynchronousRequest:request error:error];
+}
+
+- (NSArray *)GETAllRolesError:(NSError **)error
+{
+    NSURLRequest *request = [self requestOfType:RequestTypeGET
+                                    forEndPoint:rolesEndPoint
                                  withParameters:nil];
     return [self sendSynchronousRequest:request error:error];
 }
@@ -94,7 +153,7 @@ WebClient static *sharedClient;
 - (NSArray *)GETAllRoomsError:(NSError **)error
 {
     NSURLRequest *request = [self requestOfType:RequestTypeGET
-                                    forEndPoint:roomEndPoint
+                                    forEndPoint:roomsEndPoint
                                  withParameters:nil];
     return [self sendSynchronousRequest:request error:error];
 }
@@ -102,7 +161,23 @@ WebClient static *sharedClient;
 - (NSArray *)GETAllSessionsError:(NSError **)error
 {
     NSURLRequest *request = [self requestOfType:RequestTypeGET
-                                    forEndPoint:sessionEndPoint
+                                    forEndPoint:sessionsEndPoint
+                                 withParameters:nil];
+    return [self sendSynchronousRequest:request error:error];
+}
+
+- (NSArray *)GETAllStudentsError:(NSError **)error
+{
+    NSURLRequest *request = [self requestOfType:RequestTypeGET
+                                    forEndPoint:studentsEndPoint
+                                 withParameters:nil];
+    return [self sendSynchronousRequest:request error:error];
+}
+
+- (NSDictionary *)GETAllUsersError:(NSError **)error
+{
+    NSURLRequest *request = [self requestOfType:RequestTypeGET
+                                    forEndPoint:usersEndPoint
                                  withParameters:nil];
     return [self sendSynchronousRequest:request error:error];
 }
