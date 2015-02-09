@@ -21,7 +21,10 @@
 		4A3F9DF41A87FD5F00F49DF1 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F9DF31A87FD5F00F49DF1 /* Session.m */; };
 		4A3F9DF71A880E3A00F49DF1 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F9DF61A880E3A00F49DF1 /* Lesson.m */; };
 		4A3F9DFA1A88106B00F49DF1 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F9DF91A88106B00F49DF1 /* Module.m */; };
-		4A3F9DFD1A8828A800F49DF1 /* SessionMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F9DFC1A8828A800F49DF1 /* SessionMasterTableViewController.m */; };
+		4A3F9E071A8840ED00F49DF1 /* CourseMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F9E001A8840ED00F49DF1 /* CourseMasterTableViewController.m */; };
+		4A3F9E081A8840ED00F49DF1 /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F9E021A8840ED00F49DF1 /* LoginTableViewController.m */; };
+		4A3F9E091A8840ED00F49DF1 /* ModuleMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F9E041A8840ED00F49DF1 /* ModuleMasterTableViewController.m */; };
+		4A3F9E0A1A8840ED00F49DF1 /* SessionMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F9E061A8840ED00F49DF1 /* SessionMasterTableViewController.m */; };
 		4A5FE59C1A697361002F5446 /* Course+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE59B1A697361002F5446 /* Course+Additions.m */; };
 		4A5FE59F1A69736D002F5446 /* Lesson+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE59E1A69736D002F5446 /* Lesson+Additions.m */; };
 		4A5FE5A21A697378002F5446 /* Resource+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FE5A11A697378002F5446 /* Resource+Additions.m */; };
@@ -32,9 +35,6 @@
 		4A620E151A85A38500EC3252 /* User+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A620E141A85A38500EC3252 /* User+Additions.m */; };
 		4A8964BB1A80E65B0013C37F /* Attendance+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8964BA1A80E65B0013C37F /* Attendance+Additions.m */; };
 		4A8964BE1A80E7870013C37F /* Student+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8964BD1A80E7870013C37F /* Student+Additions.m */; };
-		4AEB47471A868EB50042BC1E /* CourseMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47461A868EB50042BC1E /* CourseMasterTableViewController.m */; };
-		4AEB474A1A8693CE0042BC1E /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47491A8693CE0042BC1E /* LoginTableViewController.m */; };
-		4AEB474D1A869CD00042BC1E /* ModuleMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB474C1A869CD00042BC1E /* ModuleMasterTableViewController.m */; };
 		4AEB9B1E1A6818CF00482EDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B1D1A6818CF00482EDF /* main.m */; };
 		4AEB9B211A6818CF00482EDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB9B201A6818CF00482EDF /* AppDelegate.m */; };
 		4AEB9B2A1A6818CF00482EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AEB9B281A6818CF00482EDF /* Main.storyboard */; };
@@ -90,8 +90,14 @@
 		4A3F9DF61A880E3A00F49DF1 /* Lesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lesson.m; sourceTree = "<group>"; };
 		4A3F9DF81A88106B00F49DF1 /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
 		4A3F9DF91A88106B00F49DF1 /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
-		4A3F9DFB1A8828A800F49DF1 /* SessionMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionMasterTableViewController.h; sourceTree = "<group>"; };
-		4A3F9DFC1A8828A800F49DF1 /* SessionMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionMasterTableViewController.m; sourceTree = "<group>"; };
+		4A3F9DFF1A8840ED00F49DF1 /* CourseMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseMasterTableViewController.h; sourceTree = "<group>"; };
+		4A3F9E001A8840ED00F49DF1 /* CourseMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseMasterTableViewController.m; sourceTree = "<group>"; };
+		4A3F9E011A8840ED00F49DF1 /* LoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewController.h; sourceTree = "<group>"; };
+		4A3F9E021A8840ED00F49DF1 /* LoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
+		4A3F9E031A8840ED00F49DF1 /* ModuleMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleMasterTableViewController.h; sourceTree = "<group>"; };
+		4A3F9E041A8840ED00F49DF1 /* ModuleMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleMasterTableViewController.m; sourceTree = "<group>"; };
+		4A3F9E051A8840ED00F49DF1 /* SessionMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionMasterTableViewController.h; sourceTree = "<group>"; };
+		4A3F9E061A8840ED00F49DF1 /* SessionMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionMasterTableViewController.m; sourceTree = "<group>"; };
 		4A5FE59A1A697361002F5446 /* Course+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Course+Additions.h"; sourceTree = "<group>"; };
 		4A5FE59B1A697361002F5446 /* Course+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Course+Additions.m"; sourceTree = "<group>"; };
 		4A5FE59D1A69736D002F5446 /* Lesson+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lesson+Additions.h"; sourceTree = "<group>"; };
@@ -112,12 +118,6 @@
 		4A8964BA1A80E65B0013C37F /* Attendance+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Attendance+Additions.m"; sourceTree = "<group>"; };
 		4A8964BC1A80E7870013C37F /* Student+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Additions.h"; sourceTree = "<group>"; };
 		4A8964BD1A80E7870013C37F /* Student+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Additions.m"; sourceTree = "<group>"; };
-		4AEB47451A868EB50042BC1E /* CourseMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseMasterTableViewController.h; sourceTree = "<group>"; };
-		4AEB47461A868EB50042BC1E /* CourseMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseMasterTableViewController.m; sourceTree = "<group>"; };
-		4AEB47481A8693CE0042BC1E /* LoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewController.h; sourceTree = "<group>"; };
-		4AEB47491A8693CE0042BC1E /* LoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
-		4AEB474B1A869CD00042BC1E /* ModuleMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleMasterTableViewController.h; sourceTree = "<group>"; };
-		4AEB474C1A869CD00042BC1E /* ModuleMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleMasterTableViewController.m; sourceTree = "<group>"; };
 		4AEB9B181A6818CF00482EDF /* BeaconBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEB9B1C1A6818CF00482EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AEB9B1D1A6818CF00482EDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -171,17 +171,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A3F9DFE1A8840ED00F49DF1 /* My Courses */ = {
+			isa = PBXGroup;
+			children = (
+				4A3F9DFF1A8840ED00F49DF1 /* CourseMasterTableViewController.h */,
+				4A3F9E001A8840ED00F49DF1 /* CourseMasterTableViewController.m */,
+				4A3F9E011A8840ED00F49DF1 /* LoginTableViewController.h */,
+				4A3F9E021A8840ED00F49DF1 /* LoginTableViewController.m */,
+				4A3F9E031A8840ED00F49DF1 /* ModuleMasterTableViewController.h */,
+				4A3F9E041A8840ED00F49DF1 /* ModuleMasterTableViewController.m */,
+				4A3F9E051A8840ED00F49DF1 /* SessionMasterTableViewController.h */,
+				4A3F9E061A8840ED00F49DF1 /* SessionMasterTableViewController.m */,
+			);
+			path = "My Courses";
+			sourceTree = "<group>";
+		};
 		4AEB47441A868EB50042BC1E /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4AEB47451A868EB50042BC1E /* CourseMasterTableViewController.h */,
-				4AEB47461A868EB50042BC1E /* CourseMasterTableViewController.m */,
-				4AEB474B1A869CD00042BC1E /* ModuleMasterTableViewController.h */,
-				4AEB474C1A869CD00042BC1E /* ModuleMasterTableViewController.m */,
-				4A3F9DFB1A8828A800F49DF1 /* SessionMasterTableViewController.h */,
-				4A3F9DFC1A8828A800F49DF1 /* SessionMasterTableViewController.m */,
-				4AEB47481A8693CE0042BC1E /* LoginTableViewController.h */,
-				4AEB47491A8693CE0042BC1E /* LoginTableViewController.m */,
+				4A3F9DFE1A8840ED00F49DF1 /* My Courses */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -501,8 +509,8 @@
 				4A3F9DCD1A87FBAD00F49DF1 /* Room.m in Sources */,
 				4A8964BE1A80E7870013C37F /* Student+Additions.m in Sources */,
 				4AEB9B211A6818CF00482EDF /* AppDelegate.m in Sources */,
-				4AEB47471A868EB50042BC1E /* CourseMasterTableViewController.m in Sources */,
-				4AEB474D1A869CD00042BC1E /* ModuleMasterTableViewController.m in Sources */,
+				4A3F9E091A8840ED00F49DF1 /* ModuleMasterTableViewController.m in Sources */,
+				4A3F9E081A8840ED00F49DF1 /* LoginTableViewController.m in Sources */,
 				4A3F9DF41A87FD5F00F49DF1 /* Session.m in Sources */,
 				4AEB9B661A682B2F00482EDF /* Room+Additions.m in Sources */,
 				4A620DE61A8571E900EC3252 /* Lecturer+Additions.m in Sources */,
@@ -516,6 +524,8 @@
 				4A3F9DC71A87FBAD00F49DF1 /* Attendance.m in Sources */,
 				4A3F9DF71A880E3A00F49DF1 /* Lesson.m in Sources */,
 				4A3F9DFA1A88106B00F49DF1 /* Module.m in Sources */,
+				4A3F9E0A1A8840ED00F49DF1 /* SessionMasterTableViewController.m in Sources */,
+				4A3F9E071A8840ED00F49DF1 /* CourseMasterTableViewController.m in Sources */,
 				4A3F9DD01A87FBAD00F49DF1 /* User.m in Sources */,
 				4A3F9DD91A87FBAD00F49DF1 /* Resource.m in Sources */,
 				4A3F9DEB1A87FBAD00F49DF1 /* Student.m in Sources */,
@@ -525,12 +535,10 @@
 				4AEB9B691A682B4600482EDF /* Beacon+Additions.m in Sources */,
 				4A3F9DE21A87FBAD00F49DF1 /* Beacon.m in Sources */,
 				4AEB9B4C1A681B3300482EDF /* WebClient.m in Sources */,
-				4AEB474A1A8693CE0042BC1E /* LoginTableViewController.m in Sources */,
 				4A5FE59C1A697361002F5446 /* Course+Additions.m in Sources */,
 				4AEB9B1E1A6818CF00482EDF /* main.m in Sources */,
 				4A3F9DDF1A87FBAD00F49DF1 /* Course.m in Sources */,
 				4A8964BB1A80E65B0013C37F /* Attendance+Additions.m in Sources */,
-				4A3F9DFD1A8828A800F49DF1 /* SessionMasterTableViewController.m in Sources */,
 				4A3F9DCA1A87FBAD00F49DF1 /* ResourceType.m in Sources */,
 				4A5FE5A51A697386002F5446 /* ResourceType+Additions.m in Sources */,
 				4A620DE31A856F0100EC3252 /* Role+Additions.m in Sources */,
