@@ -37,6 +37,10 @@
     NSArray *lessons = [[WebClient sharedClient] GETAllLessonsError:&error];
     [Lesson importLessons:lessons intoContext:context error:&error];
     
+    //Modules
+    NSArray *modules = [[WebClient sharedClient] GETAllModulesError:&error];
+    [Module importModules:modules intoContext:context error:&error];
+    
     //Resources
     NSArray *resources = [[WebClient sharedClient] GETAllResourcesError:&error];
     [Resource importResources:resources intoContext:context error:&error];

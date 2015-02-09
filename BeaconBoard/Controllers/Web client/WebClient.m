@@ -17,6 +17,7 @@ NSString *const beaconsEndPoint       = @"beacons";
 NSString *const coursesEndPoint       = @"courses";
 NSString *const lecturersEndPoint     = @"lecturers";
 NSString *const lessonsEndPoint       = @"lessons";
+NSString *const modulesEndPoint       = @"modules";
 NSString *const resourcesEndPoint     = @"resources";
 NSString *const resourceTypesEndPoint = @"resourceTypes";
 NSString *const rolesEndPoint         = @"roles";
@@ -25,10 +26,6 @@ NSString *const sessionsEndPoint      = @"sessions";
 NSString *const studentsEndPoint      = @"students";
 NSString *const tokensEndPoint        = @"tokens";
 NSString *const usersEndPoint         = @"users";
-
-NSString *const WebClientErrorDomain  = @"me.ste.WebClientErrorDomain";
-NSString *const HTTPErrorDomain       = @"me.ste.HTTPErrorDomain";
-NSString *const WebClientErrorReason  = @"WebClientErrorReason";
 
 WebClient static *sharedClient;
 
@@ -123,6 +120,14 @@ WebClient static *sharedClient;
 {
     NSURLRequest *request = [self requestOfType:RequestTypeGET
                                     forEndPoint:lessonsEndPoint
+                                 withParameters:nil];
+    return [self sendSynchronousRequest:request error:error];
+}
+
+- (NSArray *)GETAllModulesError:(NSError **)error
+{
+    NSURLRequest *request = [self requestOfType:RequestTypeGET
+                                    forEndPoint:modulesEndPoint
                                  withParameters:nil];
     return [self sendSynchronousRequest:request error:error];
 }
@@ -271,11 +276,11 @@ WebClient static *sharedClient;
     {
         if((response != nil && [response statusCode] != 200))
         {
-            NSString *reason = JSON[@"Reason"];
+            NSString *message = JSON[@"Message"];
             NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:responseError.userInfo];
-            if (reason)
+            if (message)
             {
-                userInfo[WebClientErrorReason] = reason;
+                userInfo[WebClientErrorMessage] = message;
             }
             *error = [NSError errorWithDomain:WebClientErrorDomain
                                          code:[response statusCode]

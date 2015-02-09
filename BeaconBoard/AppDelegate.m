@@ -7,11 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "DataSynchroniser.h"
 #import "WebClient.h"
-#import "ContextManager.h"
+#import "LoginTableViewController.h"
 
-@interface AppDelegate () <UISplitViewControllerDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -20,23 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
-    
-    NSString *username = @"student1";
-    NSString *password = @"password";
-    
-    WebClient *webclient = [WebClient sharedClient];
-    [webclient asyncLoginUsername:username
-                         password:password
-                          success:^(id responseObject) {
-                              NSLog(@"Success");
-                              [DataSynchroniser syncData];
-                          } failure:^(NSError *error) {
-                              NSLog(@"Error %@", error.localizedDescription);
-                          }];
+    if(![WebClient sharedClient].userToken)
+    {
+        LoginTableViewController *loginTableViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"loginTableViewController"];
+        
+        dispatch_after(0, dispatch_get_main_queue(), ^{
+        [self.window.rootViewController presentViewController:loginTableViewController
+                                                     animated:NO
+                                                   completion:nil];
+        });
+    }
     
     return YES;
 }

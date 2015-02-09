@@ -14,6 +14,7 @@
 #import "Course+Additions.h"
 #import "Lecturer+Additions.h"
 #import "Lesson+Additions.h"
+#import "Module+Additions.h"
 #import "Resource+Additions.h"
 #import "ResourceType+Additions.h"
 #import "Room+Additions.h"

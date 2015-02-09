@@ -14,6 +14,10 @@ typedef NS_ENUM(NSUInteger, RequestType) {
     RequestTypeDELETE,
 };
 
+static NSString *WebClientErrorDomain  = @"me.ste.WebClientErrorDomain";
+static NSString *HTTPErrorDomain       = @"me.ste.HTTPErrorDomain";
+static NSString *WebClientErrorMessage  = @"WebClientErrorReason";
+
 @interface WebClient : NSObject
 
 @property (nonatomic, strong) NSString *userToken;
@@ -28,6 +32,7 @@ typedef NS_ENUM(NSUInteger, RequestType) {
 - (NSArray *)GETAllCourcesError:(NSError **)error;
 - (NSArray *)GETAllLecturersError:(NSError **)error;
 - (NSArray *)GETAllLessonsError:(NSError **)error;
+- (NSArray *)GETAllModulesError:(NSError **)error;
 - (NSArray *)GETAllResourcesError:(NSError **)error;
 - (NSArray *)GETAllResourceTypesError:(NSError **)error;
 - (NSArray *)GETAllRolesError:(NSError **)error;

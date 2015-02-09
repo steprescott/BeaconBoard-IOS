@@ -2,7 +2,7 @@
 //  User.m
 //  BeaconBoard
 //
-//  Created by Ste Prescott on 07/02/2015.
+//  Created by Ste Prescott on 08/02/2015.
 //  Copyright (c) 2015 Ste Prescott. All rights reserved.
 //
 
@@ -15,11 +15,11 @@
 @dynamic emailAddress;
 @dynamic firstName;
 @dynamic hasBeenUpdated;
+@dynamic isActiveUser;
 @dynamic lastName;
 @dynamic otherNames;
 @dynamic userID;
 @dynamic username;
-@dynamic isActiveUser;
 @dynamic role;
 
 @end

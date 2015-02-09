@@ -18,13 +18,7 @@
                uniqueRemoteKey:@"LessonID"
            propertySetterBlock:^(NSDictionary *dictionary, Lesson *managedObject) {
                managedObject.lessonID = ![dictionary[@"LessonID"] isEqual:[NSNull null]] ? dictionary[@"LessonID"] : nil;
-               
-               [dictionary[@"CourseIDs"] enumerateObjectsUsingBlock:^(NSString *courseID, NSUInteger idx, BOOL *stop) {
-                   [managedObject addCoursesObject:[Course sqk_insertOrFetchWithKey:@"courseID"
-                                                                              value:courseID
-                                                                            context:context
-                                                                              error:error]];
-               }];
+               managedObject.name = ![dictionary[@"Name"] isEqual:[NSNull null]] ? dictionary[@"Name"] : nil;
                
                [dictionary[@"SessionIDs"] enumerateObjectsUsingBlock:^(NSString *sessionID, NSUInteger idx, BOOL *stop) {
                    [managedObject addSessionsObject:[Session sqk_insertOrFetchWithKey:@"sessionID"

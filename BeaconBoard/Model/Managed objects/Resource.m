@@ -2,7 +2,7 @@
 //  Resource.m
 //  BeaconBoard
 //
-//  Created by Ste Prescott on 07/02/2015.
+//  Created by Ste Prescott on 08/02/2015.
 //  Copyright (c) 2015 Ste Prescott. All rights reserved.
 //
 
@@ -13,11 +13,11 @@
 
 @implementation Resource
 
+@dynamic hasBeenUpdated;
 @dynamic name;
 @dynamic resourceDescription;
 @dynamic resourceID;
 @dynamic urlString;
-@dynamic hasBeenUpdated;
 @dynamic lessons;
 @dynamic resourceType;
 

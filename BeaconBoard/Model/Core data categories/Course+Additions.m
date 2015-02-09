@@ -20,9 +20,9 @@
                managedObject.courseID = ![dictionary[@"CourseID"] isEqual:[NSNull null]] ? dictionary[@"CourseID"] : nil;
                managedObject.name = ![dictionary[@"Name"] isEqual:[NSNull null]] ? dictionary[@"Name"] : nil;
                
-               [dictionary[@"LessonIDs"] enumerateObjectsUsingBlock:^(NSString *lessonID, NSUInteger idx, BOOL *stop) {
-                   [managedObject addLessonsObject:[Lesson sqk_insertOrFetchWithKey:@"lessonID"
-                                                                              value:lessonID
+               [dictionary[@"ModuleIDs"] enumerateObjectsUsingBlock:^(NSString *moduleID, NSUInteger idx, BOOL *stop) {
+                   [managedObject addModulesObject:[Module sqk_insertOrFetchWithKey:@"moduleID"
+                                                                              value:moduleID
                                                                             context:context
                                                                               error:error]];
                }];

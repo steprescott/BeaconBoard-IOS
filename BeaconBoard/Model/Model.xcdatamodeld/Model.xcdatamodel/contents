@@ -18,7 +18,7 @@
         <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="lecturers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lecturer" inverseName="courses" inverseEntity="Lecturer" syncable="YES"/>
-        <relationship name="lessons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lesson" inverseName="courses" inverseEntity="Lesson" syncable="YES"/>
+        <relationship name="modules" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Module" inverseName="courses" inverseEntity="Module" syncable="YES"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="courses" inverseEntity="Student" syncable="YES"/>
     </entity>
     <entity name="Lecturer" representedClassName="Lecturer" parentEntity="User" syncable="YES">
@@ -28,9 +28,18 @@
     <entity name="Lesson" representedClassName="Lesson" syncable="YES">
         <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="lessonID" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="lessons" inverseEntity="Course" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="reources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Resource" inverseName="lessons" inverseEntity="Resource" syncable="YES"/>
         <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="lesson" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="Module" representedClassName="Module" syncable="YES">
+        <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="moduleDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moduleID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="termNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="modules" inverseEntity="Course" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="module" inverseEntity="Session" syncable="YES"/>
     </entity>
     <entity name="Resource" representedClassName="Resource" syncable="YES">
         <attribute name="hasBeenUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -69,6 +78,7 @@
         <relationship name="attendances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attendance" inverseName="session" inverseEntity="Attendance" syncable="YES"/>
         <relationship name="lecturers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lecturer" inverseName="sessions" inverseEntity="Lecturer" syncable="YES"/>
         <relationship name="lesson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lesson" inverseName="sessions" inverseEntity="Lesson" syncable="YES"/>
+        <relationship name="module" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="sessions" inverseEntity="Module" syncable="YES"/>
         <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="sessions" inverseEntity="Room" syncable="YES"/>
     </entity>
     <entity name="Student" representedClassName="Student" parentEntity="User" syncable="YES">
@@ -87,17 +97,18 @@
         <relationship name="role" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Role" inverseName="users" inverseEntity="Role" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Attendance" positionX="-1622" positionY="-295" width="128" height="105"/>
-        <element name="Beacon" positionX="-2007" positionY="-129" width="128" height="120"/>
-        <element name="Course" positionX="-1359" positionY="-55" width="128" height="133"/>
-        <element name="Lecturer" positionX="-1352" positionY="-180" width="128" height="75"/>
-        <element name="Lesson" positionX="-1368" positionY="113" width="128" height="118"/>
-        <element name="Resource" positionX="-1170" positionY="83" width="128" height="150"/>
-        <element name="ResourceType" positionX="-977" positionY="113" width="137" height="120"/>
-        <element name="Role" positionX="-1442" positionY="-390" width="128" height="103"/>
-        <element name="Room" positionX="-1811" positionY="-114" width="128" height="120"/>
-        <element name="Session" positionX="-1620" positionY="-144" width="128" height="165"/>
-        <element name="Student" positionX="-1143" positionY="-265" width="128" height="73"/>
-        <element name="User" positionX="-1253" positionY="-450" width="128" height="180"/>
+        <element name="Attendance" positionX="-1926" positionY="-286" width="128" height="105"/>
+        <element name="Beacon" positionX="-939" positionY="-142" width="128" height="120"/>
+        <element name="Lecturer" positionX="-1127" positionY="-434" width="128" height="73"/>
+        <element name="Resource" positionX="-940" positionY="-316" width="128" height="150"/>
+        <element name="ResourceType" positionX="-760" positionY="-286" width="137" height="120"/>
+        <element name="Role" positionX="-2124" positionY="-573" width="128" height="103"/>
+        <element name="Room" positionX="-1129" positionY="-127" width="128" height="120"/>
+        <element name="Session" positionX="-1318" positionY="-316" width="128" height="178"/>
+        <element name="Student" positionX="-1923" positionY="-419" width="128" height="73"/>
+        <element name="User" positionX="-1926" positionY="-648" width="128" height="180"/>
+        <element name="Module" positionX="-1546" positionY="-367" width="128" height="148"/>
+        <element name="Lesson" positionX="-1131" positionY="-286" width="128" height="118"/>
+        <element name="Course" positionX="-1734" positionY="-479" width="128" height="133"/>
     </elements>
 </model>

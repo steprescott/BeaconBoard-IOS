@@ -21,7 +21,7 @@
                  uniqueModelKey:@"sessionID"
                 uniqueRemoteKey:@"SessionID"
             propertySetterBlock:^(NSDictionary *dictionary, Session *managedObject) {
-                managedObject.sessionID = ![dictionary[@"SessionID"] isEqual:[NSNull null]] ? dictionary[@"SessionID"] : nil;                
+                managedObject.sessionID = ![dictionary[@"SessionID"] isEqual:[NSNull null]] ? dictionary[@"SessionID"] : nil;
                 managedObject.scheduledStartDate = ![dictionary[@"ScheduledStartDate"] isEqual:[NSNull null]] ? [dateFormatter dateFromString:dictionary[@"ScheduledStartDate"]] : nil;
                 managedObject.scheduledEndDate = ![dictionary[@"ScheduledEndDate"] isEqual:[NSNull null]] ? [dateFormatter dateFromString:dictionary[@"ScheduledEndDate"]] : nil;
                 
@@ -31,6 +31,14 @@
                                                                   value:dictionary[@"RoomID"]
                                                                 context:context
                                                                   error:error];
+                }
+                
+                if(![dictionary[@"ModuleID"] isEqual:[NSNull null]])
+                {
+                    managedObject.module = [Module sqk_insertOrFetchWithKey:@"moduleID"
+                                                                      value:dictionary[@"ModuleID"]
+                                                                    context:context
+                                                                      error:error];
                 }
                 
                 if(![dictionary[@"LessonID"] isEqual:[NSNull null]])

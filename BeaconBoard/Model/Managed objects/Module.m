@@ -1,22 +1,24 @@
 //
-//  Room.m
+//  Module.m
 //  BeaconBoard
 //
 //  Created by Ste Prescott on 08/02/2015.
 //  Copyright (c) 2015 Ste Prescott. All rights reserved.
 //
 
-#import "Room.h"
-#import "Beacon.h"
+#import "Module.h"
+#import "Course.h"
 #import "Session.h"
 
 
-@implementation Room
+@implementation Module
 
+@dynamic moduleID;
+@dynamic name;
+@dynamic moduleDescription;
+@dynamic termNumber;
 @dynamic hasBeenUpdated;
-@dynamic number;
-@dynamic roomID;
-@dynamic beacons;
+@dynamic courses;
 @dynamic sessions;
 
 @end
