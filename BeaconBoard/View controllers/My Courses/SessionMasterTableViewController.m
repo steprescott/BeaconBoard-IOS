@@ -7,6 +7,7 @@
 //
 
 #import "SessionMasterTableViewController.h"
+#import "SessionDetailTableViewController.h"
 #import "ContextManager.h"
 #import "DataSynchroniser.h"
 
@@ -124,6 +125,16 @@
     [self performSegueWithIdentifier:@"showSession" sender:self];
     UINavigationController *detailNavigationController = [self.splitViewController.viewControllers lastObject];
     detailNavigationController.topViewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"showSession"])
+    {
+        UINavigationController *navigationController = (UINavigationController *)segue.destinationViewController;
+        SessionDetailTableViewController *currentSessionTableViewController = (SessionDetailTableViewController *)navigationController.topViewController;
+        currentSessionTableViewController.currentSession = self.selectedSession;
+    }
 }
 
 @end

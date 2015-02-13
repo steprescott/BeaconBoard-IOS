@@ -11,6 +11,7 @@
 @interface Session (Additions)
 
 + (void)importSessions:(NSArray *)sessions intoContext:(NSManagedObjectContext *)context error:(NSError **)error;
++ (Session *)sessionWithSessionID:(NSString *)sessionID inContext:(NSManagedObjectContext *)context;
 + (void)deleteAllInvalidSessionInContext:(NSManagedObjectContext *)context;
 
 @end

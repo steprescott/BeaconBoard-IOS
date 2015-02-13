@@ -45,4 +45,6 @@ static NSString *WebClientErrorMessage  = @"WebClientErrorReason";
 //GET with ID
 - (NSDictionary *)GETLecturerWithID:(NSString *)lecturerID error:(NSError **)error;
 - (NSDictionary *)GETStudentWithID:(NSString *)studentID error:(NSError **)error;
+- (NSDictionary *)GETCurrentSessionForRoomWithID:(NSString *)roomID error:(NSError **)error;
+
 @end

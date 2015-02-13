@@ -11,21 +11,22 @@
 NSString *const APIBaseURL = @"http://api.beaconboard.co.uk";
 NSString *const APIKey = @"DC3A8672-1976-4993-9DD3-C42875FF7684";
 
-NSString *const activeUserEndPoint    = @"users/activeUser";
-NSString *const attendancesEndPoint   = @"attendances";
-NSString *const beaconsEndPoint       = @"beacons";
-NSString *const coursesEndPoint       = @"courses";
-NSString *const lecturersEndPoint     = @"lecturers";
-NSString *const lessonsEndPoint       = @"lessons";
-NSString *const modulesEndPoint       = @"modules";
-NSString *const resourcesEndPoint     = @"resources";
-NSString *const resourceTypesEndPoint = @"resourceTypes";
-NSString *const rolesEndPoint         = @"roles";
-NSString *const roomsEndPoint         = @"rooms";
-NSString *const sessionsEndPoint      = @"sessions";
-NSString *const studentsEndPoint      = @"students";
-NSString *const tokensEndPoint        = @"tokens";
-NSString *const usersEndPoint         = @"users";
+NSString *const activeUserEndPoint      = @"users/activeUser";
+NSString *const attendancesEndPoint     = @"attendances";
+NSString *const beaconsEndPoint         = @"beacons";
+NSString *const coursesEndPoint         = @"courses";
+NSString *const currentSessionEndPoint  = @"sessions/current";
+NSString *const lecturersEndPoint       = @"lecturers";
+NSString *const lessonsEndPoint         = @"lessons";
+NSString *const modulesEndPoint         = @"modules";
+NSString *const resourcesEndPoint       = @"resources";
+NSString *const resourceTypesEndPoint   = @"resourceTypes";
+NSString *const rolesEndPoint           = @"roles";
+NSString *const roomsEndPoint           = @"rooms";
+NSString *const sessionsEndPoint        = @"sessions";
+NSString *const studentsEndPoint        = @"students";
+NSString *const tokensEndPoint          = @"tokens";
+NSString *const usersEndPoint           = @"users";
 
 WebClient static *sharedClient;
 
@@ -210,6 +211,14 @@ WebClient static *sharedClient;
 {
     NSURLRequest *request = [self requestOfType:RequestTypeGET
                                     forEndPoint:[NSString stringWithFormat:@"%@/%@", studentsEndPoint, studentID]
+                                 withParameters:nil];
+    return [self sendSynchronousRequest:request error:error];
+}
+
+- (NSDictionary *)GETCurrentSessionForRoomWithID:(NSString *)roomID error:(NSError **)error
+{
+    NSURLRequest *request = [self requestOfType:RequestTypeGET
+                                    forEndPoint:[NSString stringWithFormat:@"%@?roomID=%@", currentSessionEndPoint, roomID]
                                  withParameters:nil];
     return [self sendSynchronousRequest:request error:error];
 }

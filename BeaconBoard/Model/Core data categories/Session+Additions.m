@@ -69,6 +69,16 @@
                           error:error];
 }
 
++ (Session *)sessionWithSessionID:(NSString *)sessionID inContext:(NSManagedObjectContext *)context
+{
+    NSFetchRequest *request = [Session sqk_fetchRequest];
+    request.predicate = [NSPredicate predicateWithFormat:@"sessionID == %@", sessionID];
+    
+    NSArray *sessions = [context executeFetchRequest:request error:nil];
+    
+    return [sessions lastObject];
+}
+
 + (void)deleteAllInvalidSessionInContext:(NSManagedObjectContext *)context
 {
     NSError *error;

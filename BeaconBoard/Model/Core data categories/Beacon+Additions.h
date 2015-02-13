@@ -12,6 +12,6 @@
 
 + (void)importBeacons:(NSArray *)beacons intoContext:(NSManagedObjectContext *)context error:(NSError **)error;
 + (void)deleteAllInvalidBeaconsInContext:(NSManagedObjectContext *)context;
-+ (Beacon *)beaconWithMajor:(NSString *)major minor:(NSString *)minor inContext:(NSManagedObjectContext *)context;
++ (Beacon *)beaconWithMajor:(NSNumber *)major minor:(NSNumber *)minor inContext:(NSManagedObjectContext *)context;
 
 @end

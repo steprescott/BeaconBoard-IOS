@@ -10,6 +10,8 @@
 
 @interface User (Additions)
 
+@property (nonatomic, strong, readonly) NSString *fullName;
+
 + (void)setActiveUserToUserWithID:(NSString *)userID inContext:(NSManagedObjectContext *)context;
 + (User *)userWithID:(NSString *)userID inContext:(NSManagedObjectContext *)context;
 + (User *)activeUserInContext:(NSManagedObjectContext *)context;

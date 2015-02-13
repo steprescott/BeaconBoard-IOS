@@ -35,7 +35,7 @@
                          error:error];
 }
 
-+ (Beacon *)beaconWithMajor:(NSString *)major minor:(NSString *)minor inContext:(NSManagedObjectContext *)context
++ (Beacon *)beaconWithMajor:(NSNumber *)major minor:(NSNumber *)minor inContext:(NSManagedObjectContext *)context
 {
     if(major && minor)
     {

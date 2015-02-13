@@ -19,16 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    if(![WebClient sharedClient].userToken)
-//    {
-//        LoginTableViewController *loginTableViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"loginTableViewController"];
-//        
-//        dispatch_after(0, dispatch_get_main_queue(), ^{
-//        [self.window.rootViewController presentViewController:loginTableViewController
-//                                                     animated:NO
-//                                                   completion:nil];
-//        });
-//    }
+    if(![WebClient sharedClient].userToken)
+    {
+        LoginTableViewController *loginTableViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"loginTableViewController"];
+        
+        dispatch_after(0, dispatch_get_main_queue(), ^{
+        [self.window.rootViewController presentViewController:loginTableViewController
+                                                     animated:NO
+                                                   completion:nil];
+        });
+    }
     
     return YES;
 }

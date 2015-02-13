@@ -86,4 +86,16 @@
     return [self.role.name isEqualToString:@"Student"];
 }
 
+- (NSString *)fullName
+{
+    if(self.otherNames)
+    {
+        return [NSString stringWithFormat:@"%@ %@ %@", self.firstName, self.otherNames, self.lastName];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
+    }
+}
+
 @end
