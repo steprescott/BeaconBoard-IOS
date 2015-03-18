@@ -70,7 +70,7 @@ typedef NS_ENUM(NSUInteger, TableViewSectionResourcesRow) {
                 NSLog(@"Beacon helper error. %@", error.localizedDescription);
             }];
             
-            self.shuRegion = [BeaconHelper regionFromUUIDString:@"112215A5-9A51-40D7-A5CA-F8CC8F8A89DE"
+            self.shuRegion = [BeaconHelper regionFromUUIDString:@"6AF5F61B-DD81-4A39-AA8D-2D749ACDF524"
                                                  withIdentifier:@"SHU-Region"];
         }
         
