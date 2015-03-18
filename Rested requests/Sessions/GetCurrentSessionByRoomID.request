@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>api.beaconboard.co.uk/sessions/GetCurrentSessionByRoomID</string>
+	<string>api.beaconboard.co.uk/sessions/current</string>
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>
@@ -24,7 +24,7 @@
 			<key>inUse</key>
 			<true/>
 			<key>value</key>
-			<string>4d61a3f0-8896-48ef-a427-6b707c9aeb96</string>
+			<string>79022e51-fb4b-4ad6-a7b5-038c34bf41ba</string>
 		</dict>
 	</array>
 	<key>httpMethod</key>
@@ -39,7 +39,7 @@
 			<key>inUse</key>
 			<true/>
 			<key>parameter</key>
-			<string>id</string>
+			<string>roomID</string>
 			<key>value</key>
 			<string>67daf5e0-326e-4ef9-8e6e-a93a3f5bd764</string>
 		</dict>
